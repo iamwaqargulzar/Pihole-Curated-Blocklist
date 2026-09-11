@@ -9,3 +9,4 @@
 - Added source-size checks, essential-domain checks, output bounds, hashes and tests.
 - Added daily automated builds and reproducible build documentation.
 - Applied ABP exceptions during compilation without emitting unsupported `@@` subscription lines.
+- Applied exceptions before parent-domain compression so a broad block cannot swallow a narrow exception.

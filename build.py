@@ -136,6 +136,11 @@ def is_covered(domain: str, selected: set[str]) -> bool:
     return any(".".join(labels[index:]) in selected for index in range(len(labels) - 1))
 
 
+def domain_and_parents(domain: str) -> set[str]:
+    labels = domain.split(".")
+    return {".".join(labels[index:]) for index in range(len(labels) - 1)}
+
+
 def collapse_descendants(domains: set[str]) -> tuple[set[str], int]:
     selected: set[str] = set()
     for domain in sorted(domains, key=lambda item: (item.count("."), len(item), item)):
@@ -196,12 +201,16 @@ def main() -> int:
         )
 
     raw_block_count = sum(int(item["block_rules"]) for item in source_stats)
-    unique_before_collapse = len(all_blocks)
-    blocks, descendant_blocks_removed = collapse_descendants(all_blocks)
     allows, descendant_allows_removed = collapse_descendants(all_allows)
-
-    allow_conflicts_removed = {domain for domain in blocks if is_covered(domain, allows)}
-    blocks.difference_update(allow_conflicts_removed)
+    unique_before_collapse = len(all_blocks)
+    allow_ancestors = set().union(*(domain_and_parents(domain) for domain in allows)) if allows else set()
+    allow_conflicts_removed = {
+        domain
+        for domain in all_blocks
+        if is_covered(domain, allows) or domain in allow_ancestors
+    }
+    all_blocks.difference_update(allow_conflicts_removed)
+    blocks, descendant_blocks_removed = collapse_descendants(all_blocks)
 
     for domain in CRITICAL_DOMAINS:
         if is_covered(domain, blocks) and not is_covered(domain, allows):

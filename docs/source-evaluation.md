@@ -15,15 +15,15 @@ The following counts were downloaded on 11 September 2026. Counts represent pars
 | Source | Rules observed | Exact domains found only in this source | Decision |
 |---|---:|---:|---|
 | HaGeZi Pro mini | 50,212 | 19,267 | Include: balanced, size-optimized coverage |
-| HaGeZi TIF mini | 176,800 | 90,654 | Include: threat intelligence companion |
+| HaGeZi TIF mini | 176,800 | 90,681 | Include: threat intelligence companion |
 | HaGeZi DoH only | 3,318 | 3,279 | Include: encrypted-DNS endpoint hostnames |
-| oisd big | 246,701 | 96,323 | Include: broad, functionality-first policy |
-| AdGuard DNS Filter | 177,211 block rules plus 176 exceptions | 113,750 | Include: widely deployed DNS filter |
+| oisd big | 246,765 | 96,371 | Include: broad, functionality-first policy |
+| AdGuard DNS Filter | 177,211 block rules plus 176 exceptions | 113,703 | Include: widely deployed DNS filter |
 | StevenBlack unified hosts | 79,964 | 53,310 | Include: independent hosts-file lineage |
 | oisd small | 55,490 | Not measured | Exclude: subset of oisd big |
 | 1Hosts Lite | about 202,970 lines | Not measured | Exclude from first release: another broad aggregator |
 
-The six selected feeds contributed 734,206 raw block rules. Exact cross-source deduplication reduced that to 540,902 unique domains. Removing 50,502 child domains already covered by a blocked parent and resolving 22 allow conflicts produced 490,378 final block rules. “Only in this source” is an exact-domain comparison before parent compression; it shows that every selected feed added distinct data, but it does not prove every added rule is equally valuable. These are original measurements from this repository’s first build; current counts are always available in [`dist/stats.json`](../dist/stats.json).
+The six selected feeds contributed 734,270 raw block rules. Exact cross-source deduplication reduced that to 540,950 unique domains. Applying 176 upstream exceptions removed 121 conflicting rules; parent-domain compression then removed 49,068 redundant descendants and produced 491,761 final block rules. “Only in this source” is an exact-domain comparison before parent compression; it shows that every selected feed added distinct data, but it does not prove every added rule is equally valuable. These are original measurements from this repository’s first safe build; current counts are always available in [`dist/stats.json`](../dist/stats.json).
 
 ## Why these sources
 
@@ -75,7 +75,7 @@ GitHub stars are a useful signal that maintainers receive scrutiny, but they are
 
 Pi-hole Gravity already sorts subscribed domains, but its database keeps source relationships and every extra feed must still be downloaded and parsed. Pi-hole’s documentation describes Gravity as downloading each source, parsing it, merging it, removing comments, sorting uniquely and rebuilding the gravity table. Prebuilding one feed moves much of that work off the router and makes the exact compilation auditable. [Pi-hole Gravity command](https://docs.pi-hole.net/main/pihole-command/), [Pi-hole domain database](https://docs.pi-hole.net/database/domain-database/)
 
-More importantly, list size has diminishing returns. The first six sources contained 734,206 parseable block rules but only 540,902 unique domains before parent-domain compression. Raw rule totals would have overstated distinct coverage by more than 193,000 entries.
+More importantly, list size has diminishing returns. The first six sources contained 734,270 parseable block rules but only 540,950 unique domains before exception handling and parent-domain compression. Raw rule totals would have overstated distinct coverage by more than 193,000 entries.
 
 ## Known limits
 

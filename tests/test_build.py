@@ -39,7 +39,10 @@ class BuildTests(unittest.TestCase):
         self.assertEqual(removed, 2)
 
     def test_generated_feed_applies_but_does_not_emit_exceptions(self):
-        source = b"||ads.example.com^\n@@||safe.example.com^\n||safe.example.com^\n"
+        source = (
+            b"||example.com^\n||ads.example.com^\n"
+            b"@@||safe.example.com^\n||safe.example.com^\n"
+        )
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
             (root / "sources.json").write_text(
@@ -58,6 +61,7 @@ class BuildTests(unittest.TestCase):
                 self.assertEqual(build.main(), 0)
             output = (root / "dist" / "blocklist.txt").read_text()
             self.assertIn("||ads.example.com^", output)
+            self.assertNotIn("||example.com^", output)
             self.assertNotIn("||safe.example.com^", output)
             self.assertNotIn("@@", output)
 
