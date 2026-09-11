@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-09-11T03:09:37+00:00",
-  "source_snapshot_sha256": "5664e668b2a9af10a035f5ae13794da07c3dc31d5f8bff56711abf36d04163fd",
+  "generated_at": "2026-09-11T03:23:52+00:00",
+  "source_snapshot_sha256": "a660a744f0a0715b874bc706735688d177f9b35aa14150e8e6dd5ceec4562744",
   "source_count": 6,
-  "source_block_rules_total": 734206,
-  "unique_block_domains_before_semantic_deduplication": 540902,
-  "duplicate_block_rules_removed": 193304,
-  "descendant_block_rules_removed": 50502,
+  "source_block_rules_total": 734270,
+  "unique_block_domains_before_semantic_deduplication": 540950,
+  "duplicate_block_rules_removed": 193320,
+  "descendant_block_rules_removed": 50501,
   "allow_conflicts_removed": 22,
-  "final_block_rules": 490378,
+  "final_block_rules": 490427,
   "final_allow_rules": 176,
   "sources": [
     {
@@ -28,7 +28,7 @@
       "allow_rules": 0,
       "ignored_lines": 0,
       "sha256": "c174ce6e15dff6279edfc73d31f2b92f67c2ea705c09da0a7eee122e8d08e8d9",
-      "rules_unique_to_this_source": 90654
+      "rules_unique_to_this_source": 90681
     },
     {
       "name": "HaGeZi DoH/VPN/TOR/Proxy bypass - DoH only",
@@ -43,12 +43,12 @@
     {
       "name": "oisd big",
       "url": "https://big.oisd.nl",
-      "download_bytes": 5686815,
-      "block_rules": 246701,
+      "download_bytes": 5688200,
+      "block_rules": 246765,
       "allow_rules": 0,
       "ignored_lines": 0,
-      "sha256": "83649f7335c862b4fb31af34c88229e93002d5ff0630bda744ab17247c17e7cd",
-      "rules_unique_to_this_source": 96323
+      "sha256": "7458caf052e8409c77d45eab6fbcf215b1a65b463886eebdf7af7211490e68ee",
+      "rules_unique_to_this_source": 96371
     },
     {
       "name": "AdGuard DNS filter",
@@ -58,7 +58,7 @@
       "allow_rules": 176,
       "ignored_lines": 777,
       "sha256": "4f82e3960a815f953c2150bba1f251e2fc845c290112cff19de517a3836d23a1",
-      "rules_unique_to_this_source": 113750
+      "rules_unique_to_this_source": 113703
     },
     {
       "name": "StevenBlack hosts",
