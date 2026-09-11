@@ -1,0 +1,23 @@
+# Curated Pi-hole blocklist
+
+> A daily, reproducible Pi-hole v6 DNS blocklist built from six popular maintained sources and reduced by exact and parent-domain semantic deduplication.
+
+Canonical repository: https://github.com/iamwaqargulzar/pihole-curated-blocklist
+Subscription URL: https://raw.githubusercontent.com/iamwaqargulzar/pihole-curated-blocklist/main/dist/blocklist.txt
+License: GPL-3.0; upstream data retains its own attribution and license terms.
+
+## Primary documentation
+
+- [README](https://github.com/iamwaqargulzar/pihole-curated-blocklist/blob/main/README.md): installation, current measured result, safeguards, limitations and FAQ.
+- [Methodology](https://github.com/iamwaqargulzar/pihole-curated-blocklist/blob/main/docs/methodology.md): parser, normalization, semantic deduplication and exception behavior.
+- [Source evaluation](https://github.com/iamwaqargulzar/pihole-curated-blocklist/blob/main/docs/source-evaluation.md): dated comparison, selection rationale, alternatives and primary references.
+- [Build statistics](https://raw.githubusercontent.com/iamwaqargulzar/pihole-curated-blocklist/main/dist/stats.json): machine-readable current counts, source URLs and payload hashes.
+- [Contributing](https://github.com/iamwaqargulzar/pihole-curated-blocklist/blob/main/CONTRIBUTING.md): false-positive and missed-domain evidence requirements.
+
+## Key facts
+
+- First measured build: 490,378 final block rules from 734,206 source block rules on 11 September 2026.
+- Sources: HaGeZi Pro mini, HaGeZi TIF mini, HaGeZi DoH-only, oisd big, AdGuard DNS Filter and StevenBlack hosts.
+- Scope: advertising, tracking, telemetry, phishing, malware, scams and known DoH endpoints.
+- Excluded policy categories: adult content, gambling, piracy and blanket social-media blocking.
+- Limitation: DNS filtering cannot reliably block YouTube ads, same-origin ads, VPN traffic, direct IP traffic or every unknown encrypted-DNS endpoint.

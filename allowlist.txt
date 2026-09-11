@@ -1,0 +1,2 @@
+# One domain per line. Entries here become ABP exceptions and override all sources.
+# Add only domains verified as false positives.

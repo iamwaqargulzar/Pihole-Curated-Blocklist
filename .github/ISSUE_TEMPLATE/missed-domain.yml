@@ -1,0 +1,32 @@
+name: Missed unwanted domain
+description: Propose a hostname that should be blocked.
+title: "[Missed domain]: "
+labels: ["false-negative"]
+body:
+  - type: input
+    id: domain
+    attributes:
+      label: Hostname
+      placeholder: tracker.example.com
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - Advertising
+        - Tracking or telemetry
+        - Malware or phishing
+        - Scam or fraud
+        - Encrypted DNS bypass
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence and breakage assessment
+      description: Explain what the hostname serves and why blocking it should not break wanted content.
+    validations:
+      required: true
