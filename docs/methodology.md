@@ -39,7 +39,7 @@ This transformation is more useful than line-level deduplication because Pi-hole
 
 ## Exception policy
 
-All upstream ABP exceptions are merged. A local entry in `allowlist.txt` has the same effect. An exception for `example.com` covers that domain and its descendants, so any block rule completely covered by the exception is omitted from the generated file.
+All upstream ABP exceptions are merged. A local entry in `allowlist.txt` has the same effect. An exception for `example.com` covers that domain and its descendants, so any block rule completely covered by the exception is omitted from the generated file. Exceptions are applied while building; they are not emitted because Pi-hole Gravity treats subscribed `@@` lines as invalid entries.
 
 This is intentionally conservative. A source that explicitly protects a domain from breakage can override a block supplied by another source. It lowers false-positive risk, although it can also reduce blocking in a genuine disagreement between maintainers.
 

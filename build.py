@@ -258,12 +258,11 @@ def main() -> int:
         "! Description: Popular maintained sources, normalized and semantically deduplicated.",
         f"! Last modified: {generated}",
         f"! Block rules: {len(blocks)}",
-        f"! Allow rules: {len(allows)}",
+        f"! Upstream exceptions applied during build: {len(allows)}",
         "! Homepage: https://github.com/iamwaqargulzar/pihole-curated-blocklist",
         "! License: GPL-3.0; upstream licenses and attribution are documented in README.md",
         "!",
     ]
-    output.extend(f"@@||{domain}^" for domain in sorted(allows))
     output.extend(f"||{domain}^" for domain in sorted(blocks))
     text = "\n".join(output) + "\n"
     target = dist / "blocklist.txt"
