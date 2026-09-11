@@ -14,8 +14,8 @@ The builder converts several DNS blocklist formats into one deterministic Pi-hol
 4. Normalize domains to lowercase IDNA ASCII and reject IP addresses, malformed names, comments, cosmetic filters and unsupported regular expressions.
 5. Merge all blocking domains and exceptions into separate sets.
 6. Remove exact duplicates across sources.
-7. Remove a descendant rule when an existing parent rule already covers it.
-8. Remove a block rule fully covered by an upstream or local exception.
+7. Apply exceptions before parent compression. Remove both block rules covered by an exception and broader parent rules that would otherwise cover the exception.
+8. Remove a descendant block rule when a remaining parent rule already covers it.
 9. Check essential public domains and enforce a bounded final rule count.
 10. Sort the result, write ABP rules, and publish source hashes and build statistics.
 
@@ -41,7 +41,7 @@ This transformation is more useful than line-level deduplication because Pi-hole
 
 All upstream ABP exceptions are merged. A local entry in `allowlist.txt` has the same effect. An exception for `example.com` covers that domain and its descendants, so any block rule completely covered by the exception is omitted from the generated file. Exceptions are applied while building; they are not emitted because Pi-hole Gravity treats subscribed `@@` lines as invalid entries.
 
-This is intentionally conservative. A source that explicitly protects a domain from breakage can override a block supplied by another source. It lowers false-positive risk, although it can also reduce blocking in a genuine disagreement between maintainers.
+This is intentionally conservative. A source that explicitly protects a domain from breakage can override a block supplied by another source. If a narrow exception conflicts with a broader parent block, the parent is removed while separately listed sibling or child blocks remain. This lowers false-positive risk, although it can also reduce blocking in a genuine disagreement between maintainers.
 
 ## What the parser does not import
 

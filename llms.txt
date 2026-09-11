@@ -16,7 +16,7 @@ License: GPL-3.0; upstream data retains its own attribution and license terms.
 
 ## Key facts
 
-- First measured build: 490,378 final block rules from 734,206 source block rules on 11 September 2026.
+- First safe measured build: 491,761 final block rules from 734,270 source block rules on 11 September 2026.
 - Sources: HaGeZi Pro mini, HaGeZi TIF mini, HaGeZi DoH-only, oisd big, AdGuard DNS Filter and StevenBlack hosts.
 - Scope: advertising, tracking, telemetry, phishing, malware, scams and known DoH endpoints.
 - Excluded policy categories: adult content, gambling, piracy and blanket social-media blocking.

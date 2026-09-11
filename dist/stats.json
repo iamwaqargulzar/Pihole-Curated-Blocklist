@@ -5,9 +5,9 @@
   "source_block_rules_total": 734270,
   "unique_block_domains_before_semantic_deduplication": 540950,
   "duplicate_block_rules_removed": 193320,
-  "descendant_block_rules_removed": 50501,
-  "allow_conflicts_removed": 22,
-  "final_block_rules": 490427,
+  "descendant_block_rules_removed": 49068,
+  "allow_conflicts_removed": 121,
+  "final_block_rules": 491761,
   "final_allow_rules": 176,
   "sources": [
     {
