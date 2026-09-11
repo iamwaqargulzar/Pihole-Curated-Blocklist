@@ -1,0 +1,35 @@
+name: False positive
+description: Report a hostname that breaks a legitimate site or app.
+title: "[False positive]: "
+labels: ["false-positive"]
+body:
+  - type: markdown
+    attributes:
+      value: "Do not include passwords, private IP addresses, tokens, full DNS logs, or browsing history."
+  - type: input
+    id: domain
+    attributes:
+      label: Blocked hostname
+      placeholder: ads.example.com
+    validations:
+      required: true
+  - type: input
+    id: product
+    attributes:
+      label: Affected site or app
+    validations:
+      required: true
+  - type: textarea
+    id: symptom
+    attributes:
+      label: Reproducible symptom
+      description: Explain what fails and how you confirmed Pi-hole caused it.
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Pi-hole source lookup
+      description: Paste the non-sensitive result of `pihole -q -exact -adlist hostname.example`.
+    validations:
+      required: true

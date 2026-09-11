@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If this build or its measurements support your work, cite this repository and the upstream list maintainers."
+title: "Curated Pi-hole Blocklist"
+type: dataset
+authors:
+  - family-names: Gulzar
+    given-names: Waqar
+repository-code: "https://github.com/iamwaqargulzar/pihole-curated-blocklist"
+url: "https://raw.githubusercontent.com/iamwaqargulzar/pihole-curated-blocklist/main/dist/blocklist.txt"
+license: GPL-3.0
+date-released: 2026-09-11
+keywords:
+  - Pi-hole
+  - DNS blocklist
+  - ad blocking
+  - tracker blocking
+  - malware protection

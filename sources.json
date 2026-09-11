@@ -1,0 +1,44 @@
+[
+  {
+    "name": "HaGeZi Multi PRO mini",
+    "url": "https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/pro.mini.txt",
+    "homepage": "https://github.com/hagezi/dns-blocklists",
+    "license": "GPL-3.0",
+    "minimum_rules": 40000
+  },
+  {
+    "name": "HaGeZi Threat Intelligence Feeds mini",
+    "url": "https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/tif.mini.txt",
+    "homepage": "https://github.com/hagezi/dns-blocklists",
+    "license": "GPL-3.0",
+    "minimum_rules": 100000
+  },
+  {
+    "name": "HaGeZi DoH/VPN/TOR/Proxy bypass - DoH only",
+    "url": "https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/doh.txt",
+    "homepage": "https://github.com/hagezi/dns-blocklists",
+    "license": "GPL-3.0",
+    "minimum_rules": 1000
+  },
+  {
+    "name": "oisd big",
+    "url": "https://big.oisd.nl",
+    "homepage": "https://oisd.nl/",
+    "license": "GPL-3.0",
+    "minimum_rules": 150000
+  },
+  {
+    "name": "AdGuard DNS filter",
+    "url": "https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt",
+    "homepage": "https://github.com/AdguardTeam/AdGuardSDNSFilter",
+    "license": "GPL-3.0",
+    "minimum_rules": 100000
+  },
+  {
+    "name": "StevenBlack hosts",
+    "url": "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts",
+    "homepage": "https://github.com/StevenBlack/hosts",
+    "license": "MIT",
+    "minimum_rules": 50000
+  }
+]
