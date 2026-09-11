@@ -4,7 +4,7 @@
 [![License: GPL-3.0](https://img.shields.io/badge/license-GPL--3.0-blue.svg)](LICENSE)
 [![Pi-hole: v6](https://img.shields.io/badge/Pi--hole-v6-96060c.svg)](https://pi-hole.net/)
 
-This repository produces one Pi-hole v6 blocklist from six maintained DNS-filter sources. It normalizes hosts and Adblock Plus rules, removes exact duplicates and redundant subdomains, preserves upstream exceptions, validates essential domains, and publishes build statistics. The result is designed for a home router where broad coverage matters but maintenance must remain predictable.
+This repository produces one Pi-hole v6 blocklist from six maintained DNS-filter sources. It normalizes hosts and Adblock Plus rules, removes exact duplicates and redundant subdomains, applies upstream exceptions before publishing, validates essential domains, and publishes build statistics. The result is designed for a home router where broad coverage matters but maintenance must remain predictable.
 
 **Current build:** 490,378 block rules from 734,206 source rules. The initial build removed 193,304 exact duplicates, 50,502 redundant descendants, and 22 block/allow conflicts. Counts change as upstream lists change; [the generated statistics](dist/stats.json) are authoritative.
 
@@ -46,7 +46,7 @@ The builder performs two levels of deduplication:
 1. **Exact deduplication.** Equivalent domains from every source become one canonical lowercase ASCII domain.
 2. **Semantic deduplication.** If `example.com` is wildcard-blocked, rules for `ads.example.com` and `track.ads.example.com` are redundant and removed.
 
-Every emitted block rule uses Pi-hole-compatible ABP syntax: `||example.com^`. Upstream `@@||example.com^` exceptions are preserved and take priority over block rules. This format blocks both the named domain and its subdomains without expanding millions of predictable subdomain entries.
+Every emitted rule uses Pi-hole-compatible ABP syntax: `||example.com^`. Upstream `@@||example.com^` exceptions take priority during compilation: conflicting block rules are removed rather than emitting exception lines that Pi-hole Gravity does not import. The resulting format blocks both the named domain and its subdomains without expanding millions of predictable subdomain entries.
 
 ## Build safeguards
 
