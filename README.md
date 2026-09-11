@@ -6,7 +6,7 @@
 
 This repository produces one Pi-hole v6 blocklist from six maintained DNS-filter sources. It normalizes hosts and Adblock Plus rules, removes exact duplicates and redundant subdomains, applies upstream exceptions before publishing, validates essential domains, and publishes build statistics. The result is designed for a home router where broad coverage matters but maintenance must remain predictable.
 
-**Current build:** 490,378 block rules from 734,206 source rules. The initial build removed 193,304 exact duplicates, 50,502 redundant descendants, and 22 block/allow conflicts. Counts change as upstream lists change; [the generated statistics](dist/stats.json) are authoritative.
+**Initial measured build (11 September 2026):** 490,378 block rules from 734,206 source rules. It removed 193,304 exact duplicates, 50,502 redundant descendants, and 22 block/allow conflicts. Counts change as upstream lists change; [the generated statistics](dist/stats.json) are authoritative.
 
 ## Use it with Pi-hole
 
