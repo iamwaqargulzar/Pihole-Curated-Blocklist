@@ -1,0 +1,5 @@
+# Supplied sources that cannot be safely represented in this domain/ABP feed.
+# Kept here for auditability rather than silently discarded.
+
+# Pi-hole regular expressions are not equivalent to finite domain rules.
+https://raw.githubusercontent.com/mmotti/pihole-regex/refs/heads/master/regex.list

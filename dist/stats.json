@@ -1,74 +1,74 @@
 {
-  "generated_at": "2026-09-11T03:31:40+00:00",
-  "source_snapshot_sha256": "a660a744f0a0715b874bc706735688d177f9b35aa14150e8e6dd5ceec4562744",
+  "generated_at": "2026-09-22T09:56:41+00:00",
+  "source_snapshot_sha256": "67fc7d56fd48cb99b63e63b2d8cacb9e779c0eaf3cc08ea4d65951735aedb35d",
   "source_count": 6,
-  "source_block_rules_total": 734270,
-  "unique_block_domains_before_semantic_deduplication": 540950,
-  "duplicate_block_rules_removed": 193320,
-  "descendant_block_rules_removed": 49068,
+  "source_block_rules_total": 743550,
+  "unique_block_domains_before_semantic_deduplication": 547300,
+  "duplicate_block_rules_removed": 196250,
+  "descendant_block_rules_removed": 47232,
   "allow_conflicts_removed": 121,
-  "final_block_rules": 491761,
+  "final_block_rules": 499947,
   "final_allow_rules": 176,
   "sources": [
     {
       "name": "HaGeZi Multi PRO mini",
       "url": "https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/pro.mini.txt",
-      "download_bytes": 1124194,
-      "block_rules": 50212,
+      "download_bytes": 1195816,
+      "block_rules": 53698,
       "allow_rules": 0,
       "ignored_lines": 0,
-      "sha256": "944dd9719cc94b80d8e88c95fd2f21ce35b439a167b1708d18272747e9ec6584",
-      "rules_unique_to_this_source": 19267
+      "sha256": "afbc444c6155a2f20d37c7137e2e287da3195788a16dede7fbfc451d6f475d4d",
+      "rules_unique_to_this_source": 20065
     },
     {
       "name": "HaGeZi Threat Intelligence Feeds mini",
       "url": "https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/tif.mini.txt",
-      "download_bytes": 3726934,
-      "block_rules": 176800,
+      "download_bytes": 3869870,
+      "block_rules": 182901,
       "allow_rules": 0,
       "ignored_lines": 0,
-      "sha256": "c174ce6e15dff6279edfc73d31f2b92f67c2ea705c09da0a7eee122e8d08e8d9",
-      "rules_unique_to_this_source": 90681
+      "sha256": "66e42e1c16d643e5da20f82238931618752bbb2115e971de6628533dc3427564",
+      "rules_unique_to_this_source": 98517
     },
     {
       "name": "HaGeZi DoH/VPN/TOR/Proxy bypass - DoH only",
       "url": "https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/doh.txt",
-      "download_bytes": 69597,
-      "block_rules": 3318,
+      "download_bytes": 69870,
+      "block_rules": 3331,
       "allow_rules": 0,
       "ignored_lines": 0,
-      "sha256": "38bcb1a47f993ec6deed6d3daa1b07c78e45050e5a68a4e207044a8effead39c",
-      "rules_unique_to_this_source": 3279
+      "sha256": "37dd224055a232e7697f7fa86951478f3d6ebbfe2a39ee77bbb371f7b3526ec9",
+      "rules_unique_to_this_source": 3292
     },
     {
       "name": "oisd big",
       "url": "https://big.oisd.nl",
-      "download_bytes": 5688200,
-      "block_rules": 246765,
+      "download_bytes": 5691674,
+      "block_rules": 246425,
       "allow_rules": 0,
       "ignored_lines": 0,
-      "sha256": "7458caf052e8409c77d45eab6fbcf215b1a65b463886eebdf7af7211490e68ee",
-      "rules_unique_to_this_source": 96371
+      "sha256": "aebad74aedc78d956930154fcc3acc97fa57be2700863952dec3232ba8134ca7",
+      "rules_unique_to_this_source": 96170
     },
     {
       "name": "AdGuard DNS filter",
       "url": "https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt",
-      "download_bytes": 4327300,
-      "block_rules": 177211,
+      "download_bytes": 4409413,
+      "block_rules": 180964,
       "allow_rules": 176,
-      "ignored_lines": 777,
-      "sha256": "4f82e3960a815f953c2150bba1f251e2fc845c290112cff19de517a3836d23a1",
-      "rules_unique_to_this_source": 113703
+      "ignored_lines": 662,
+      "sha256": "6abd0bbd087e7f253117cf54929d2be71222ad6c565d4a6d0d6b64a3cf82df8b",
+      "rules_unique_to_this_source": 115714
     },
     {
       "name": "StevenBlack hosts",
       "url": "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts",
-      "download_bytes": 2390343,
-      "block_rules": 79964,
+      "download_bytes": 2311184,
+      "block_rules": 76231,
       "allow_rules": 0,
       "ignored_lines": 14,
-      "sha256": "91ccff4cf105c9303caff6edcbc4964bf6400da86d51382d97267c9cb3a516cf",
-      "rules_unique_to_this_source": 53310
+      "sha256": "a639701fa54b53bdaf5b7e344869bfba497c200d05a3e0f357d35b7bd461c208",
+      "rules_unique_to_this_source": 48556
     }
   ]
 }

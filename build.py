@@ -12,6 +12,7 @@ import re
 import sys
 import time
 import urllib.error
+import urllib.parse
 import urllib.request
 from dataclasses import dataclass
 from datetime import datetime, timezone
@@ -23,7 +24,10 @@ DOMAIN_RE = re.compile(
     r"^(?=.{1,253}\.?$)(?:[a-z0-9_](?:[a-z0-9_-]{0,61}[a-z0-9_])?\.)+"
     r"(?:[a-z0-9_](?:[a-z0-9_-]{0,61}[a-z0-9_])?)$"
 )
-ABP_RE = re.compile(r"^(?P<exception>@@)?\|\|(?P<domain>[^/^$*|]+)\^")
+ABP_RE = re.compile(
+    r"^(?P<exception>@@)?\|\|(?:https?://)?"
+    r"(?P<domain>[^/^$*|:]+)(?:[/:^$]|$)"
+)
 HOSTS_IPS = {"0.0.0.0", "127.0.0.1", "::", "::1"}
 CRITICAL_DOMAINS = {
     "amazon.com",
@@ -163,12 +167,56 @@ def load_local_allowlist(path: Path) -> set[str]:
     return result
 
 
+def canonical_source_url(url: str) -> str:
+    parsed = urllib.parse.urlsplit(url.strip())
+    if parsed.scheme.lower() not in {"http", "https"} or not parsed.netloc:
+        raise ValueError(f"invalid source URL: {url}")
+    path = parsed.path.rstrip("/") or "/"
+    return urllib.parse.urlunsplit(
+        (parsed.scheme.lower(), parsed.netloc.lower(), path, parsed.query, "")
+    )
+
+
+def load_sources(root: Path, include_additional: bool = False) -> list[dict[str, object]]:
+    sources = json.loads((root / "sources.json").read_text(encoding="utf-8"))
+    extra_path = root / "additional-sources.txt"
+    if extra_path.exists():
+        for raw in extra_path.read_text(encoding="utf-8").splitlines():
+            url = raw.partition("#")[0].strip()
+            if not url:
+                continue
+            parsed = urllib.parse.urlsplit(url)
+            basename = Path(parsed.path.rstrip("/")).name or parsed.netloc
+            extra = {
+                "name": f"{parsed.netloc} — {basename}",
+                "url": url,
+                "homepage": f"{parsed.scheme}://{parsed.netloc}/",
+                "license": "See upstream",
+                "minimum_rules": 1,
+            }
+            if include_additional:
+                sources.append(extra)
+            else:
+                # Validate the catalog against active sources without enabling it.
+                sources.append({**extra, "catalog_only": True})
+
+    seen: dict[str, str] = {}
+    for source in sources:
+        canonical = canonical_source_url(str(source["url"]))
+        if canonical in seen:
+            raise ValueError(
+                f"duplicate source URL: {source['url']} duplicates {seen[canonical]}"
+            )
+        seen[canonical] = str(source["url"])
+    return [source for source in sources if include_additional or not source.get("catalog_only")]
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--check", action="store_true", help="validate without writing output")
     args = parser.parse_args()
 
-    sources = json.loads((ROOT / "sources.json").read_text(encoding="utf-8"))
+    sources = load_sources(ROOT)
     all_blocks: set[str] = set()
     all_allows: set[str] = load_local_allowlist(ROOT / "allowlist.txt")
     block_frequency: Counter[str] = Counter()

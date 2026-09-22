@@ -27,6 +27,13 @@ The six selected feeds contributed 734,270 raw block rules. Exact cross-source d
 
 ## Why these sources
 
+The default build remains deliberately smaller than the full source catalog. The
+additional catalog was normalized against the active sources before being committed:
+three exact URL duplicates were removed, 90 compatible source URLs were retained for
+evaluation, and one regex-only feed was documented separately. Enabling every catalog
+entry yielded more than 6.5 million final rules, so catalog membership is not treated
+as automatic approval for the router-safe default profile.
+
 ### HaGeZi
 
 HaGeZi is the strongest fit for a router-conscious baseline. Its documentation calls Pro the general recommendation, says a main tier should be paired with TIF, and explicitly offers mini editions for limited hardware. It also warns against subscribing to multiple main tiers because they are nested. The current repository is highly active and had roughly 26,000 GitHub stars during this review. [HaGeZi FAQ](https://github.com/hagezi/dns-blocklists/blob/main/FAQ.md), [HaGeZi repository](https://github.com/hagezi/dns-blocklists)

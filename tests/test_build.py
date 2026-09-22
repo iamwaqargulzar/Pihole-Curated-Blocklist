@@ -4,10 +4,24 @@ from pathlib import Path
 from unittest.mock import patch
 
 import build
-from build import collapse_descendants, parse_content
+from build import collapse_descendants, load_sources, parse_content
 
 
 class BuildTests(unittest.TestCase):
+    def test_source_loader_rejects_normalized_duplicates(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            (root / "sources.json").write_text(
+                '[{"name":"one","url":"https://EXAMPLE.test/list/",'
+                '"homepage":"https://example.test","license":"test",'
+                '"minimum_rules":1}]'
+            )
+            (root / "additional-sources.txt").write_text(
+                "https://example.test/list\n"
+            )
+            with self.assertRaisesRegex(ValueError, "duplicate source URL"):
+                load_sources(root, include_additional=True)
+
     def test_parse_supported_formats(self):
         parsed = parse_content(
             """
@@ -15,6 +29,7 @@ class BuildTests(unittest.TestCase):
             0.0.0.0 ads.example.com
             tracker.example.net
             ||malware.example.org^
+            ||https://legacy.example.net/path
             @@||safe.example.org^
             ||wild.example.com^$important
             /unsupported-regex/
@@ -26,6 +41,7 @@ class BuildTests(unittest.TestCase):
                 "ads.example.com",
                 "tracker.example.net",
                 "malware.example.org",
+                "legacy.example.net",
                 "wild.example.com",
             },
         )
