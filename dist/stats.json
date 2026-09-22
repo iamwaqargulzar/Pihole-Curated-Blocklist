@@ -1,34 +1,34 @@
 {
-  "generated_at": "2026-09-21T08:52:15+00:00",
-  "source_snapshot_sha256": "a26d7dc7294e4728abacd4ae879a39ab7a5b16b2e08cf5dd2c0e9ab55e07818a",
+  "generated_at": "2026-09-22T08:29:10+00:00",
+  "source_snapshot_sha256": "7050415dcb3cb18fcb25698749961e95586aab31485891b4b4b7ce4af1b7651c",
   "source_count": 6,
-  "source_block_rules_total": 734639,
-  "unique_block_domains_before_semantic_deduplication": 542592,
-  "duplicate_block_rules_removed": 192047,
-  "descendant_block_rules_removed": 45312,
+  "source_block_rules_total": 742594,
+  "unique_block_domains_before_semantic_deduplication": 547219,
+  "duplicate_block_rules_removed": 195375,
+  "descendant_block_rules_removed": 46811,
   "allow_conflicts_removed": 121,
-  "final_block_rules": 497159,
+  "final_block_rules": 500287,
   "final_allow_rules": 176,
   "sources": [
     {
       "name": "HaGeZi Multi PRO mini",
       "url": "https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/pro.mini.txt",
-      "download_bytes": 989995,
-      "block_rules": 44690,
+      "download_bytes": 1157829,
+      "block_rules": 52365,
       "allow_rules": 0,
       "ignored_lines": 0,
-      "sha256": "394e8b94e36756e18eb1cd44e56f063f62429119494ffdfcfb8bbe3a02361699",
-      "rules_unique_to_this_source": 14846
+      "sha256": "64e18d1c670653d0dbdc0294f27c794eff3e4c7ed48dce7a78d230315d6cb067",
+      "rules_unique_to_this_source": 19173
     },
     {
       "name": "HaGeZi Threat Intelligence Feeds mini",
       "url": "https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/tif.mini.txt",
-      "download_bytes": 3882209,
-      "block_rules": 183697,
+      "download_bytes": 3875853,
+      "block_rules": 183386,
       "allow_rules": 0,
       "ignored_lines": 0,
-      "sha256": "4d5ae3a250b3ee6903948ff32e4050a9c8705f1f7da270b9fcf757a08e0b0b1c",
-      "rules_unique_to_this_source": 99809
+      "sha256": "61a71f9507b74d6df7f47e77842c6f9dffd86e33baf8d5eb0fb1c426565a871a",
+      "rules_unique_to_this_source": 99375
     },
     {
       "name": "HaGeZi DoH/VPN/TOR/Proxy bypass - DoH only",
@@ -38,27 +38,27 @@
       "allow_rules": 0,
       "ignored_lines": 0,
       "sha256": "37dd224055a232e7697f7fa86951478f3d6ebbfe2a39ee77bbb371f7b3526ec9",
-      "rules_unique_to_this_source": 3290
+      "rules_unique_to_this_source": 3291
     },
     {
       "name": "oisd big",
       "url": "https://big.oisd.nl",
-      "download_bytes": 5684528,
-      "block_rules": 246178,
+      "download_bytes": 5691674,
+      "block_rules": 246425,
       "allow_rules": 0,
       "ignored_lines": 0,
-      "sha256": "c81efc4e477b3e9920422d34817a91fd2d4e0da1ae227c134e91b5fe00d67a77",
-      "rules_unique_to_this_source": 97033
+      "sha256": "aebad74aedc78d956930154fcc3acc97fa57be2700863952dec3232ba8134ca7",
+      "rules_unique_to_this_source": 96508
     },
     {
       "name": "AdGuard DNS filter",
       "url": "https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt",
-      "download_bytes": 4401838,
-      "block_rules": 180512,
+      "download_bytes": 4409413,
+      "block_rules": 180856,
       "allow_rules": 176,
       "ignored_lines": 779,
-      "sha256": "47865e1739de87a1ba837ba8c7cfc528e90c90bf4e02077e0579d3e57cf813a9",
-      "rules_unique_to_this_source": 116313
+      "sha256": "6abd0bbd087e7f253117cf54929d2be71222ad6c565d4a6d0d6b64a3cf82df8b",
+      "rules_unique_to_this_source": 116012
     },
     {
       "name": "StevenBlack hosts",
@@ -68,7 +68,7 @@
       "allow_rules": 0,
       "ignored_lines": 14,
       "sha256": "a639701fa54b53bdaf5b7e344869bfba497c200d05a3e0f357d35b7bd461c208",
-      "rules_unique_to_this_source": 49057
+      "rules_unique_to_this_source": 48587
     }
   ]
 }
