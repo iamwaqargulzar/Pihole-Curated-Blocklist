@@ -6,7 +6,7 @@ authors:
   - family-names: Gulzar
     given-names: Waqar
 repository-code: "https://github.com/iamwaqargulzar/pihole-curated-blocklist"
-url: "https://raw.githubusercontent.com/iamwaqargulzar/pihole-curated-blocklist/main/dist/blocklist.txt"
+url: "https://github.com/iamwaqargulzar/Pihole-Curated-Blocklist"
 license: GPL-3.0
 date-released: 2026-09-11
 keywords:

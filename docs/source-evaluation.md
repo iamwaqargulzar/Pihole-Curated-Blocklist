@@ -27,12 +27,11 @@ The six selected feeds contributed 734,270 raw block rules. Exact cross-source d
 
 ## Why these sources
 
-The default build remains deliberately smaller than the full source catalog. The
-additional catalog was normalized against the active sources before being committed:
-three exact URL duplicates were removed, 90 compatible source URLs were retained for
-evaluation, and one regex-only feed was documented separately. Enabling every catalog
-entry yielded more than 6.5 million final rules, so catalog membership is not treated
-as automatic approval for the router-safe default profile.
+The full build uses every domain-compatible source in the submitted catalog. Three
+exact URL duplicates were removed, 90 additional source URLs were activated, and one
+regex-only feed was documented separately because it does not enumerate domains. The
+combined result is published as eight stable partitions so no individual file exceeds
+GitHub's normal file-size limit.
 
 ### HaGeZi
 
@@ -58,31 +57,31 @@ StevenBlack’s project is a long-running merge of curated hosts sources with du
 
 Its coverage overlaps modern ABP lists, but its independent hosts-file lineage still contributes unique domains and a useful second curation path.
 
-## Popular alternatives not included
+## Additional source families now included
 
 ### 1Hosts Lite
 
-1Hosts Lite is a credible balanced list designed for general users and low false-positive rates. Its project had about 2,200 GitHub stars during this review and supports Pi-hole directly. It is a sensible alternative to this combined feed, especially for users who prefer one curator. It was excluded from the first combined release because another large all-purpose source added less value than its raw size suggested after the existing four coverage families. [1Hosts repository](https://github.com/badmojr/1Hosts)
+1Hosts Lite is a credible balanced list designed for general users and low false-positive rates. Its project had about 2,200 GitHub stars during this review and supports Pi-hole directly. It was excluded from the first release but is included in the expanded source set. [1Hosts repository](https://github.com/badmojr/1Hosts)
 
 ### Block List Project
 
 The Block List Project is useful when category control matters. It offers separate advertising, tracking, malware, phishing, ransomware, fraud, Smart TV and other lists; the project reports automated upstream monitoring, weekly dead-domain checks, and more than 151 tests. It had about 5,000 GitHub stars during this review. [Block List Project repository](https://github.com/blocklistproject/Lists)
 
-Its granular categories are better added deliberately than swept into a general household list. TIF and oisd already provide broad threat coverage here, while categories such as gambling, piracy and social networks require an explicit household policy decision.
+Its granular advertising, tracking, malware, phishing, ransomware, fraud, redirect, Smart TV and basic feeds are included in the expanded source set.
 
 ### Firebog
 
-Firebog remains a well-known directory of third-party lists, especially its green “ticked” recommendations. It is a source catalog rather than one consistent policy. Importing every ticked feed increases the number of upstream failure points and makes a false positive harder to trace. It is most useful when an operator wants to choose individual specialists, not when the goal is a single reproducible feed. [Firebog](https://firebog.net/)
+Firebog remains a well-known directory of third-party lists, especially its green “ticked” recommendations. It is a source catalog rather than one consistent policy. Selected Firebog-hosted feeds are included in the expanded build and remain independently identified in the generated statistics. [Firebog](https://firebog.net/)
 
 ## Popularity is not quality
 
 GitHub stars are a useful signal that maintainers receive scrutiny, but they are not usage counts, accuracy tests, or false-positive measurements. Projects hosted outside GitHub, such as oisd, cannot be compared fairly by stars. This evaluation therefore uses popularity only as one filter alongside update cadence, transparent methodology, supported syntax, licensing, and fit for router hardware.
 
-## Why not merge everything?
+## Why preprocess the full source set?
 
 Pi-hole Gravity already sorts subscribed domains, but its database keeps source relationships and every extra feed must still be downloaded and parsed. Pi-hole’s documentation describes Gravity as downloading each source, parsing it, merging it, removing comments, sorting uniquely and rebuilding the gravity table. Prebuilding one feed moves much of that work off the router and makes the exact compilation auditable. [Pi-hole Gravity command](https://docs.pi-hole.net/main/pihole-command/), [Pi-hole domain database](https://docs.pi-hole.net/database/domain-database/)
 
-More importantly, list size has diminishing returns. The first six sources contained 734,270 parseable block rules but only 540,950 unique domains before exception handling and parent-domain compression. Raw rule totals would have overstated distinct coverage by more than 193,000 entries.
+The expanded build demonstrates the value directly: more than 19 million parsed block rules collapse to roughly 6.5 million published rules after exact deduplication, exception handling and parent-domain compression. The eight output parts are partitions of one deduplicated set, not independent overlapping compilations.
 
 ## Known limits
 

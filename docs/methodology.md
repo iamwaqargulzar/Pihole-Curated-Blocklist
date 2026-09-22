@@ -17,7 +17,8 @@ The builder converts several DNS blocklist formats into one deterministic Pi-hol
 7. Apply exceptions before parent compression. Remove both block rules covered by an exception and broader parent rules that would otherwise cover the exception.
 8. Remove a descendant block rule when a remaining parent rule already covers it.
 9. Check essential public domains and enforce a bounded final rule count.
-10. Sort the result, write ABP rules, and publish source hashes and build statistics.
+10. Assign each domain to one of eight stable SHA-256 partitions.
+11. Sort each partition, write ABP rules, and publish source hashes, checksums and build statistics.
 
 ## Semantic deduplication example
 
@@ -51,7 +52,7 @@ The output excludes cosmetic rules, URL-path rules, scriptlets, content modifier
 
 `dist/stats.json` records the build time, source URLs, downloaded byte counts, accepted rules, ignored lines and SHA-256 hash of each downloaded source. Upstream lists are rolling releases, so rebuilding an older commit may retrieve newer input unless the recorded source hash is reproduced from an archive.
 
-The generated file is deterministic for identical source payloads and `allowlist.txt`: domains are normalized and sorted, and no random state is used. The timestamp is the only metadata value that changes independently of the rules.
+The generated files are deterministic for identical source payloads and `allowlist.txt`: domains are normalized, assigned to a stable hash partition and sorted, and no random state is used. The timestamp is the only metadata value that changes independently of the rules.
 
 ## Operational trade-offs
 

@@ -43,7 +43,8 @@ CRITICAL_DOMAINS = {
     "wikipedia.org",
 }
 MINIMUM_COMBINED_RULES = 200_000
-MAXIMUM_COMBINED_RULES = 1_000_000
+MAXIMUM_COMBINED_RULES = 10_000_000
+CHUNK_COUNT = 8
 
 
 @dataclass
@@ -177,7 +178,7 @@ def canonical_source_url(url: str) -> str:
     )
 
 
-def load_sources(root: Path, include_additional: bool = False) -> list[dict[str, object]]:
+def load_sources(root: Path, include_additional: bool = True) -> list[dict[str, object]]:
     sources = json.loads((root / "sources.json").read_text(encoding="utf-8"))
     extra_path = root / "additional-sources.txt"
     if extra_path.exists():
@@ -197,7 +198,6 @@ def load_sources(root: Path, include_additional: bool = False) -> list[dict[str,
             if include_additional:
                 sources.append(extra)
             else:
-                # Validate the catalog against active sources without enabling it.
                 sources.append({**extra, "catalog_only": True})
 
     seen: dict[str, str] = {}
@@ -211,12 +211,17 @@ def load_sources(root: Path, include_additional: bool = False) -> list[dict[str,
     return [source for source in sources if include_additional or not source.get("catalog_only")]
 
 
+def chunk_index(domain: str) -> int:
+    digest = hashlib.sha256(domain.encode("ascii")).digest()
+    return int.from_bytes(digest[:2], "big") % CHUNK_COUNT
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--check", action="store_true", help="validate without writing output")
     args = parser.parse_args()
 
-    sources = load_sources(ROOT)
+    sources = load_sources(ROOT, include_additional=True)
     all_blocks: set[str] = set()
     all_allows: set[str] = load_local_allowlist(ROOT / "allowlist.txt")
     block_frequency: Counter[str] = Counter()
@@ -289,7 +294,7 @@ def main() -> int:
                 generated = str(previous["generated_at"])
         except (OSError, KeyError, TypeError, ValueError, json.JSONDecodeError):
             pass
-    stats = {
+    stats: dict[str, object] = {
         "generated_at": generated,
         "source_snapshot_sha256": source_snapshot,
         "source_count": len(sources),
@@ -309,24 +314,43 @@ def main() -> int:
 
     dist = ROOT / "dist"
     dist.mkdir(exist_ok=True)
-    output = [
-        "[Adblock Plus]",
-        "! Title: Waqar's curated Pi-hole blocklist",
-        "! Description: Popular maintained sources, normalized and semantically deduplicated.",
-        f"! Last modified: {generated}",
-        f"! Block rules: {len(blocks)}",
-        f"! Upstream exceptions applied during build: {len(allows)}",
-        "! Homepage: https://github.com/iamwaqargulzar/pihole-curated-blocklist",
-        "! License: GPL-3.0; upstream licenses and attribution are documented in README.md",
-        "!",
-    ]
-    output.extend(f"||{domain}^" for domain in sorted(blocks))
-    text = "\n".join(output) + "\n"
-    target = dist / "blocklist.txt"
-    target.write_text(text, encoding="utf-8", newline="\n")
-    (dist / "blocklist.txt.sha256").write_text(
-        f"{hashlib.sha256(text.encode()).hexdigest()}  blocklist.txt\n",
-        encoding="ascii",
+    partitions: list[list[str]] = [[] for _ in range(CHUNK_COUNT)]
+    for domain in sorted(blocks):
+        partitions[chunk_index(domain)].append(domain)
+
+    chunk_stats: list[dict[str, object]] = []
+    checksums: list[str] = []
+    for index, domains in enumerate(partitions, start=1):
+        filename = f"blocklist-{index:02d}.txt"
+        output = [
+            "[Adblock Plus]",
+            f"! Title: Waqar's complete Pi-hole blocklist — part {index:02d} of {CHUNK_COUNT:02d}",
+            "! Description: Complete multi-source domain union, normalized and semantically deduplicated.",
+            f"! Last modified: {generated}",
+            f"! Rules in this part: {len(domains)}",
+            f"! Rules in complete set: {len(blocks)}",
+            f"! Upstream exceptions applied during build: {len(allows)}",
+            "! Homepage: https://github.com/iamwaqargulzar/Pihole-Curated-Blocklist",
+            "! License: GPL-3.0; upstream data remains subject to its own terms",
+            "!",
+        ]
+        output.extend(f"||{domain}^" for domain in domains)
+        text = "\n".join(output) + "\n"
+        digest = hashlib.sha256(text.encode()).hexdigest()
+        (dist / filename).write_text(text, encoding="utf-8", newline="\n")
+        checksums.append(f"{digest}  {filename}")
+        chunk_stats.append(
+            {
+                "filename": filename,
+                "block_rules": len(domains),
+                "bytes": len(text.encode()),
+                "sha256": digest,
+            }
+        )
+
+    stats["chunks"] = chunk_stats
+    (dist / "checksums.sha256").write_text(
+        "\n".join(checksums) + "\n", encoding="ascii"
     )
     (dist / "stats.json").write_text(json.dumps(stats, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(stats, indent=2))

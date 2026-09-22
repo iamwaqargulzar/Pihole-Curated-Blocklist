@@ -4,10 +4,15 @@ from pathlib import Path
 from unittest.mock import patch
 
 import build
-from build import collapse_descendants, load_sources, parse_content
+from build import CHUNK_COUNT, chunk_index, collapse_descendants, load_sources, parse_content
 
 
 class BuildTests(unittest.TestCase):
+    def test_chunk_assignment_is_stable_and_bounded(self):
+        self.assertEqual(chunk_index("example.com"), chunk_index("example.com"))
+        self.assertGreaterEqual(chunk_index("example.com"), 0)
+        self.assertLess(chunk_index("example.com"), CHUNK_COUNT)
+
     def test_source_loader_rejects_normalized_duplicates(self):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
@@ -75,7 +80,10 @@ class BuildTests(unittest.TestCase):
                 patch("sys.argv", ["build.py"]),
             ):
                 self.assertEqual(build.main(), 0)
-            output = (root / "dist" / "blocklist.txt").read_text()
+            output = "".join(
+                path.read_text()
+                for path in sorted((root / "dist").glob("blocklist-*.txt"))
+            )
             self.assertIn("||ads.example.com^", output)
             self.assertNotIn("||example.com^", output)
             self.assertNotIn("||safe.example.com^", output)

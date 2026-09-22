@@ -26,7 +26,7 @@ A source proposal should document its maintainer, license, update cadence, suppo
 ```sh
 python3 -m unittest discover -s tests -v
 python3 build.py
-(cd dist && sha256sum -c blocklist.txt.sha256)
+(cd dist && sha256sum -c checksums.sha256)
 ```
 
 Review the changes in `dist/stats.json`. Large count changes require an explanation.

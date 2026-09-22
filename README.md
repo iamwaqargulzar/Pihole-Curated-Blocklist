@@ -4,24 +4,25 @@
 [![License: GPL-3.0](https://img.shields.io/badge/license-GPL--3.0-blue.svg)](LICENSE)
 [![Pi-hole: v6](https://img.shields.io/badge/Pi--hole-v6-96060c.svg)](https://pi-hole.net/)
 
-This repository produces one Pi-hole v6 blocklist from six maintained DNS-filter sources. It normalizes hosts and Adblock Plus rules, removes exact duplicates and redundant subdomains, applies upstream exceptions before publishing, validates essential domains, and publishes build statistics. The result is designed for a home router where broad coverage matters but maintenance must remain predictable.
+This repository combines 96 DNS-filter sources into one logical Pi-hole v6 dataset. It normalizes hosts and Adblock Plus rules, removes exact duplicates and redundant subdomains, applies upstream exceptions, and partitions the complete result into eight deterministic files that remain below GitHub's per-file limit.
 
-An additional, deduplicated catalog of community-supplied feeds is kept in
-[`additional-sources.txt`](additional-sources.txt). These feeds are not enabled in the
-default compilation: a measured test produced 19,155,597 parsed rules and 6,525,081
-final rules (about 135 MB), exceeding both this project's router-safety limit and
-GitHub's normal per-file limit. The supplied Pi-hole regex feed is retained separately
-in [`unsupported-sources.txt`](unsupported-sources.txt), because regular expressions
-cannot be safely converted into finite DNS domain rules.
+The supplied Pi-hole regex feed is retained separately in [`unsupported-sources.txt`](unsupported-sources.txt), because regular expressions do not enumerate individual domains and cannot be safely converted into finite DNS rules.
 
 **Initial measured build (11 September 2026):** 491,761 block rules from 734,270 source rules. It removed 193,320 exact duplicates, 49,068 redundant descendants, and 121 block/allow conflicts. Counts change as upstream lists change; [the generated statistics](dist/stats.json) are authoritative.
 
 ## Use it with Pi-hole
 
-Add this URL as a single subscribed list:
+Add all eight URLs as subscribed lists:
 
 ```text
-https://raw.githubusercontent.com/iamwaqargulzar/pihole-curated-blocklist/main/dist/blocklist.txt
+https://raw.githubusercontent.com/iamwaqargulzar/Pihole-Curated-Blocklist/main/dist/blocklist-01.txt
+https://raw.githubusercontent.com/iamwaqargulzar/Pihole-Curated-Blocklist/main/dist/blocklist-02.txt
+https://raw.githubusercontent.com/iamwaqargulzar/Pihole-Curated-Blocklist/main/dist/blocklist-03.txt
+https://raw.githubusercontent.com/iamwaqargulzar/Pihole-Curated-Blocklist/main/dist/blocklist-04.txt
+https://raw.githubusercontent.com/iamwaqargulzar/Pihole-Curated-Blocklist/main/dist/blocklist-05.txt
+https://raw.githubusercontent.com/iamwaqargulzar/Pihole-Curated-Blocklist/main/dist/blocklist-06.txt
+https://raw.githubusercontent.com/iamwaqargulzar/Pihole-Curated-Blocklist/main/dist/blocklist-07.txt
+https://raw.githubusercontent.com/iamwaqargulzar/Pihole-Curated-Blocklist/main/dist/blocklist-08.txt
 ```
 
 Then update Gravity:
@@ -30,20 +31,11 @@ Then update Gravity:
 pihole -g
 ```
 
-Pi-hole refreshes Gravity automatically each week. This repository rebuilds daily, so the next normal Pi-hole refresh will pick up the latest successful release.
+Pi-hole refreshes Gravity automatically each week. All eight files are required; together they contain the complete deduplicated set. [`dist/stats.json`](dist/stats.json) and [`dist/checksums.sha256`](dist/checksums.sha256) describe each current part.
 
 ## What is included?
 
-| Source | Variant | Main contribution |
-|---|---|---|
-| [HaGeZi DNS Blocklists](https://github.com/hagezi/dns-blocklists) | Multi PRO mini | Ads, tracking, telemetry and general abuse, size-optimized |
-| [HaGeZi DNS Blocklists](https://github.com/hagezi/dns-blocklists) | TIF mini | Malware, phishing, scams and threat intelligence |
-| [HaGeZi DNS Blocklists](https://github.com/hagezi/dns-blocklists) | DoH only | Known encrypted-DNS endpoints that can bypass local DNS policy |
-| [oisd](https://oisd.nl/) | big | Broad ads, tracking and threat coverage with a functionality-first policy |
-| [AdGuard DNS filter](https://github.com/AdguardTeam/AdGuardSDNSFilter) | default | DNS-specific advertising and tracking rules used by AdGuard services |
-| [StevenBlack hosts](https://github.com/StevenBlack/hosts) | unified | Mature hosts-file aggregation from multiple curated projects |
-
-Adult-content, gambling, piracy and blanket social-media lists are intentionally excluded. Those are household policy choices, not baseline ad blocking or network security.
+The build includes the six structured sources in [`sources.json`](sources.json) and all 90 deduplicated URLs in [`additional-sources.txt`](additional-sources.txt), including advertising, tracking, telemetry, malware, phishing, fraud, ransomware, Smart TV, mobile-device, adult-content and gambling feeds.
 
 Read [how the sources were evaluated](docs/source-evaluation.md) and [how the builder handles rules](docs/methodology.md).
 
@@ -61,11 +53,11 @@ Every emitted rule uses Pi-hole-compatible ABP syntax: `||example.com^`. Upstrea
 A scheduled build is rejected when:
 
 - a source is unreachable or unexpectedly small;
-- the final list falls outside the configured 200,000–1,000,000 rule range;
+- the final list falls outside the configured 200,000–10,000,000 rule range;
 - an essential domain such as `github.com`, `google.com`, or `microsoft.com` would be blocked without an exception;
 - unit tests fail.
 
-The last good file remains available when a build fails. Each successful build includes [source counts and hashes](dist/stats.json) plus a [SHA-256 checksum](dist/blocklist.txt.sha256).
+The last good files remain available when a build fails. Each successful build includes [source counts and hashes](dist/stats.json) plus [SHA-256 checksums](dist/checksums.sha256).
 
 ## Limitations
 
@@ -77,11 +69,11 @@ Because this list deliberately combines broad sources, its false-positive risk i
 
 ### Is this a replacement for adding every popular list separately?
 
-Yes. Subscribing to this generated feed and all of its upstream feeds wastes download, parsing and database work. Use this feed alone if you want this exact combination.
+Yes. Subscribe to the eight generated parts, not to their upstream feeds. Pi-hole combines the parts into one Gravity database.
 
 ### Does a larger blocklist make DNS slower?
 
-Ordinary lookups remain fast because Pi-hole keeps the compiled rules in memory. Larger lists mainly increase Gravity build time, memory use and the chance of false positives. That is why this project publishes one pre-deduplicated feed and enforces a maximum size.
+Ordinary lookups use Pi-hole's compiled database. Larger lists substantially increase Gravity build time, storage, memory use and false-positive risk; splitting only solves GitHub's file-size limit.
 
 ### Why include several lists with overlapping coverage?
 
@@ -102,10 +94,10 @@ Python 3.11 or later is recommended; there are no third-party packages.
 ```sh
 python3 -m unittest discover -s tests -v
 python3 build.py
-(cd dist && sha256sum -c blocklist.txt.sha256)
+(cd dist && sha256sum -c checksums.sha256)
 ```
 
-Source URLs and minimum-size checks live in [sources.json](sources.json). Verified exceptions live in [allowlist.txt](allowlist.txt).
+Source URLs live in [sources.json](sources.json) and [additional-sources.txt](additional-sources.txt). Verified exceptions live in [allowlist.txt](allowlist.txt).
 
 ## Project status
 
