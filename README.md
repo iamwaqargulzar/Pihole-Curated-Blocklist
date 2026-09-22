@@ -33,6 +33,8 @@ pihole -g
 
 Pi-hole refreshes Gravity automatically each week. All eight files are required; together they contain the complete deduplicated set. [`dist/stats.json`](dist/stats.json) and [`dist/checksums.sha256`](dist/checksums.sha256) describe each current part.
 
+Resource-constrained routers that cannot load the complete dataset may use the smaller, pinned compatibility snapshot at [`dist/blocklist.txt`](dist/blocklist.txt). It contains roughly 500,000 rules and is retained so existing Pi-hole subscriptions continue to refresh; it is not the complete eight-part dataset.
+
 ## What is included?
 
 The build includes the six structured sources in [`sources.json`](sources.json) and all 90 deduplicated URLs in [`additional-sources.txt`](additional-sources.txt), including advertising, tracking, telemetry, malware, phishing, fraud, ransomware, Smart TV, mobile-device, adult-content and gambling feeds.
