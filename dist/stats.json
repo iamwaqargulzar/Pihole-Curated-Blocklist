@@ -1,64 +1,64 @@
 {
-  "generated_at": "2026-10-06T10:17:03+00:00",
-  "source_snapshot_sha256": "6be1165337ac0c644a4b02f54968a6ddcd87226a6488e435ab405c50e4ad9d61",
+  "generated_at": "2026-10-07T10:16:52+00:00",
+  "source_snapshot_sha256": "2c03ce904988981144e9508eed3259909bb1a4b001585131c648f016a94d0031",
   "source_count": 96,
-  "source_block_rules_total": 18275540,
-  "unique_block_domains_before_semantic_deduplication": 8196431,
-  "duplicate_block_rules_removed": 10079109,
-  "descendant_block_rules_removed": 1574889,
-  "allow_conflicts_removed": 222047,
-  "final_block_rules": 6399495,
-  "final_allow_rules": 3716,
+  "source_block_rules_total": 18617356,
+  "unique_block_domains_before_semantic_deduplication": 8244203,
+  "duplicate_block_rules_removed": 10373153,
+  "descendant_block_rules_removed": 1573292,
+  "allow_conflicts_removed": 221969,
+  "final_block_rules": 6448942,
+  "final_allow_rules": 3714,
   "sources": [
     {
       "name": "HaGeZi Multi PRO mini",
       "url": "https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/pro.mini.txt",
-      "download_bytes": 1577450,
-      "block_rules": 70238,
+      "download_bytes": 1588262,
+      "block_rules": 70801,
       "allow_rules": 0,
       "ignored_lines": 0,
-      "sha256": "6e6c81e4bfe7ed0c2dbadd54b35ab1f74068a713167727338fbe46795b733f74",
+      "sha256": "dd89a192323761949c7b754205815864f2d9694d3b62743294714e480ee2acc2",
       "rules_unique_to_this_source": 260
     },
     {
       "name": "HaGeZi Threat Intelligence Feeds mini",
       "url": "https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/tif.mini.txt",
-      "download_bytes": 4225001,
-      "block_rules": 199510,
+      "download_bytes": 4544912,
+      "block_rules": 216397,
       "allow_rules": 0,
       "ignored_lines": 0,
-      "sha256": "6183cc7a9c34c50fc8676be5cb3645f4af535a3f7119deb95f93c70391f9edf5",
-      "rules_unique_to_this_source": 713
+      "sha256": "0af961d658d56b0c7f726e6cc65e0a36801adfcb65096adf7fa9dcb41c44c5ae",
+      "rules_unique_to_this_source": 925
     },
     {
       "name": "HaGeZi DoH/VPN/TOR/Proxy bypass - DoH only",
       "url": "https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/doh.txt",
-      "download_bytes": 69220,
-      "block_rules": 3302,
+      "download_bytes": 69116,
+      "block_rules": 3298,
       "allow_rules": 0,
       "ignored_lines": 0,
-      "sha256": "06d78cb2717869df5810137a9de68ae650d581097e62ff790aa8a531d1f706d1",
+      "sha256": "c2e3988976f29a5765caf613904e2118099e7ddb76af99f9f13cd79b60387eda",
       "rules_unique_to_this_source": 267
     },
     {
       "name": "oisd big",
       "url": "https://big.oisd.nl",
-      "download_bytes": 5547451,
-      "block_rules": 240651,
+      "download_bytes": 5540386,
+      "block_rules": 240505,
       "allow_rules": 0,
       "ignored_lines": 0,
-      "sha256": "379b4d30ad75ca45ca53057e9e732a2f3e6bb293c131887c4a7ac2fb2db19db9",
-      "rules_unique_to_this_source": 497
+      "sha256": "20920cd3b786c029d52f360e461b6680c26e17b75174616c04d41754db8a3d40",
+      "rules_unique_to_this_source": 522
     },
     {
       "name": "AdGuard DNS filter",
       "url": "https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt",
-      "download_bytes": 4342898,
-      "block_rules": 177945,
+      "download_bytes": 4349791,
+      "block_rules": 178255,
       "allow_rules": 179,
       "ignored_lines": 662,
-      "sha256": "8add6b7e9fabb97dc81347a72eceec9a504828ae245bb67a84db54d60092e91c",
-      "rules_unique_to_this_source": 42
+      "sha256": "8bf841a0602cc115f45de0cb29c13109eabfb11a9c4ab3b1e3e29aebad548842",
+      "rules_unique_to_this_source": 62
     },
     {
       "name": "StevenBlack hosts",
@@ -118,7 +118,7 @@
       "allow_rules": 0,
       "ignored_lines": 4,
       "sha256": "0b173f72f93228b9520ff1ba73afd5d8943676d0e16af920b7adae868a58e299",
-      "rules_unique_to_this_source": 370724
+      "rules_unique_to_this_source": 370723
     },
     {
       "name": "v.firebog.net \u2014 AdguardDNS.txt",
@@ -133,12 +133,12 @@
     {
       "name": "raw.githubusercontent.com \u2014 KADhosts.txt",
       "url": "https://raw.githubusercontent.com/PolishFiltersTeam/KADhosts/master/KADhosts.txt",
-      "download_bytes": 1289110,
-      "block_rules": 40476,
+      "download_bytes": 1293976,
+      "block_rules": 40612,
       "allow_rules": 0,
       "ignored_lines": 0,
-      "sha256": "4f5ea5e7ba828f46b04c65293b86600a85c6d0da2beb9794955e8cee74cc235d",
-      "rules_unique_to_this_source": 1427
+      "sha256": "737f4fbcbde787b1ec50af1e68cfd0b3609fa9cb0b333a1811d057d5e0b24fbf",
+      "rules_unique_to_this_source": 1941
     },
     {
       "name": "raw.githubusercontent.com \u2014 hosts",
@@ -158,7 +158,7 @@
       "allow_rules": 0,
       "ignored_lines": 0,
       "sha256": "0962eef388514a8996e4f0f2eee37c87fadddf0ea33f173300a0b1f5fad8bf0e",
-      "rules_unique_to_this_source": 19
+      "rules_unique_to_this_source": 21
     },
     {
       "name": "v.firebog.net \u2014 w3kbl.txt",
@@ -228,7 +228,7 @@
       "allow_rules": 0,
       "ignored_lines": 0,
       "sha256": "a32b9f7873ff8b761e0b9a4c947f5a48ee288567e981820901cf9e831cffbe8f",
-      "rules_unique_to_this_source": 370794
+      "rules_unique_to_this_source": 370806
     },
     {
       "name": "v.firebog.net \u2014 RPiList-Phishing.txt",
@@ -298,7 +298,7 @@
       "allow_rules": 0,
       "ignored_lines": 573,
       "sha256": "0b439fa1a71f1482eaf922321ee7c824beabebdd81173b68ead7e4ffa07e0115",
-      "rules_unique_to_this_source": 11139
+      "rules_unique_to_this_source": 11137
     },
     {
       "name": "blocklistproject.github.io \u2014 phishing.txt",
@@ -308,7 +308,7 @@
       "allow_rules": 0,
       "ignored_lines": 0,
       "sha256": "4407e6b9af2fa1e4def92ed523643a3380448fde81837341ffc596c6e781f134",
-      "rules_unique_to_this_source": 174245
+      "rules_unique_to_this_source": 174242
     },
     {
       "name": "blocklistproject.github.io \u2014 ransomware.txt",
@@ -328,7 +328,7 @@
       "allow_rules": 0,
       "ignored_lines": 0,
       "sha256": "799a5a8282f3b6980c508c917bf1b3f802c5c67a6bb419f90b55fe58869aa07e",
-      "rules_unique_to_this_source": 106592
+      "rules_unique_to_this_source": 106588
     },
     {
       "name": "blocklistproject.github.io \u2014 tracking.txt",
@@ -338,7 +338,7 @@
       "allow_rules": 0,
       "ignored_lines": 0,
       "sha256": "f1de1c81739ce2480b1dea890e9be6a1212008b19318b585102cc64e7013b0f1",
-      "rules_unique_to_this_source": 66691
+      "rules_unique_to_this_source": 66662
     },
     {
       "name": "blocklistproject.github.io \u2014 smart-tv.txt",
@@ -358,7 +358,7 @@
       "allow_rules": 0,
       "ignored_lines": 0,
       "sha256": "05369cce99718349a5303fb9ec58f0409697ecf8b13bacf1bcde88ef1bc8ef8e",
-      "rules_unique_to_this_source": 27699
+      "rules_unique_to_this_source": 27695
     },
     {
       "name": "raw.githubusercontent.com \u2014 th_list.txt",
@@ -373,11 +373,11 @@
     {
       "name": "raw.githubusercontent.com \u2014 abpvn_ublock.txt",
       "url": "https://raw.githubusercontent.com/abpvn/abpvn/master/filter/abpvn_ublock.txt",
-      "download_bytes": 51761,
+      "download_bytes": 51732,
       "block_rules": 248,
       "allow_rules": 48,
-      "ignored_lines": 809,
-      "sha256": "8afeb25b03589287fc85923cf0f0a4cd180e98aabaa05813bb8cc6e688e55c35",
+      "ignored_lines": 808,
+      "sha256": "fe051d4638afd0d5845ad12d1e8cb1de77bc5e3832d853948cb8c649c6ade1e1",
       "rules_unique_to_this_source": 1
     },
     {
@@ -393,12 +393,12 @@
     {
       "name": "raw.githubusercontent.com \u2014 adblock_auto_lite.txt",
       "url": "https://raw.githubusercontent.com/lingeringsound/adblock_auto/main/Rules/adblock_auto_lite.txt",
-      "download_bytes": 2706188,
-      "block_rules": 39120,
+      "download_bytes": 2708845,
+      "block_rules": 39229,
       "allow_rules": 313,
-      "ignored_lines": 19383,
-      "sha256": "a388f153db5623bd1ee3ff93ae3c85457caea361754e004849cb45fb9ad1c15e",
-      "rules_unique_to_this_source": 3640
+      "ignored_lines": 19385,
+      "sha256": "0f3512e745a944369f98481bc0363c98d5e7f9c208e7379a7d935c8ab50257cd",
+      "rules_unique_to_this_source": 3639
     },
     {
       "name": "raw.githubusercontent.com \u2014 malicious-sites.txt",
@@ -418,7 +418,7 @@
       "allow_rules": 0,
       "ignored_lines": 4,
       "sha256": "de14be22362bf9b28f7b09bd3af3655bca306a490002758e38eadd43c37e7d58",
-      "rules_unique_to_this_source": 7868
+      "rules_unique_to_this_source": 7867
     },
     {
       "name": "raw.githubusercontent.com \u2014 main-blacklist.txt",
@@ -453,11 +453,11 @@
     {
       "name": "raw.githubusercontent.com \u2014 adservers.txt",
       "url": "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/BaseFilter/sections/adservers.txt",
-      "download_bytes": 36898,
-      "block_rules": 1199,
+      "download_bytes": 37009,
+      "block_rules": 1204,
       "allow_rules": 1,
       "ignored_lines": 74,
-      "sha256": "2fa45e3824803c8146113ac2bf5b2671d44f120bcd0edcc4c8d06da3a9f0444b",
+      "sha256": "f15ab00bfe6d98824a7e711b9c5b6961c835cf291037e8d31ff416819d1b40af",
       "rules_unique_to_this_source": 0
     },
     {
@@ -468,16 +468,16 @@
       "allow_rules": 0,
       "ignored_lines": 3,
       "sha256": "9a901b4b11639380b40080eb7083377adad217ecfeed5a1d83b54009a636f2f8",
-      "rules_unique_to_this_source": 475
+      "rules_unique_to_this_source": 473
     },
     {
       "name": "abpvn.com \u2014 abpvn-fN2BbD.txt",
       "url": "https://abpvn.com/filter/abpvn-fN2BbD.txt?adguard",
-      "download_bytes": 54932,
+      "download_bytes": 54903,
       "block_rules": 247,
       "allow_rules": 49,
-      "ignored_lines": 810,
-      "sha256": "686a41f2ef5a8c35c0b7cc054eae675241a4c196fc65d0165ca764e9720c5211",
+      "ignored_lines": 809,
+      "sha256": "510d9aab5c9112e3de43157c81d91befd25e2886c8ed1164e948769429891f86",
       "rules_unique_to_this_source": 0
     },
     {
@@ -533,12 +533,12 @@
     {
       "name": "filters.adtidy.org \u2014 2.txt",
       "url": "https://filters.adtidy.org/mac_v2/filters/2.txt",
-      "download_bytes": 7230160,
-      "block_rules": 65317,
-      "allow_rules": 3765,
-      "ignored_lines": 46919,
-      "sha256": "9d6f47451f44a89c833388c63e7631c8a6cc2912104bd5bf8b46e6c3114dfb86",
-      "rules_unique_to_this_source": 2941
+      "download_bytes": 7236090,
+      "block_rules": 65580,
+      "allow_rules": 3763,
+      "ignored_lines": 46924,
+      "sha256": "f623f6e82289d36170bacc9d888d124afeae105bd35e0b14d57968607245635e",
+      "rules_unique_to_this_source": 2934
     },
     {
       "name": "raw.githubusercontent.com \u2014 hosts",
@@ -553,12 +553,12 @@
     {
       "name": "urlhaus.abuse.ch \u2014 hostfile",
       "url": "https://urlhaus.abuse.ch/downloads/hostfile/",
-      "download_bytes": 11750,
-      "block_rules": 395,
+      "download_bytes": 12017,
+      "block_rules": 404,
       "allow_rules": 0,
       "ignored_lines": 0,
-      "sha256": "ef7ede2d8a06000f7e8ae15bff7e7279be4b335b16a8d848f46fbe75afc67667",
-      "rules_unique_to_this_source": 3
+      "sha256": "e68355c1f1d1f351f152737d8103e6c913b21cd26f979e7a49d484488c914ab5",
+      "rules_unique_to_this_source": 6
     },
     {
       "name": "media.githubusercontent.com \u2014 all_domains.txt",
@@ -568,27 +568,27 @@
       "allow_rules": 0,
       "ignored_lines": 630,
       "sha256": "400d8748d07d7b83371194663f02c7ec5fbcb87e9a4958dbca8873f26b0c391f",
-      "rules_unique_to_this_source": 120884
+      "rules_unique_to_this_source": 65099
     },
     {
       "name": "dbl.ipfire.org \u2014 hosts.txt",
       "url": "https://dbl.ipfire.org/lists/ads/hosts.txt",
-      "download_bytes": 756402,
-      "block_rules": 30174,
+      "download_bytes": 759248,
+      "block_rules": 30282,
       "allow_rules": 0,
       "ignored_lines": 0,
-      "sha256": "369b254620ca59c71618aa2a055b6800462b8d8a550c11b55dc6c80037a0e008",
-      "rules_unique_to_this_source": 611
+      "sha256": "70858eba56a4abf042fcfd6c99fb0bb6b6cec171031af547bdb4b4d7fe0a301f",
+      "rules_unique_to_this_source": 675
     },
     {
       "name": "dbl.ipfire.org \u2014 hosts.txt",
       "url": "https://dbl.ipfire.org/lists/phishing/hosts.txt",
-      "download_bytes": 16107394,
-      "block_rules": 548117,
+      "download_bytes": 16098040,
+      "block_rules": 547869,
       "allow_rules": 0,
       "ignored_lines": 0,
-      "sha256": "1ae6fc48ff97497e6ce49335e35af186b7a47c3a81f7318c010d904eb60cfc7f",
-      "rules_unique_to_this_source": 149105
+      "sha256": "701b78315f04e7e0769f9736ee895e70bf1b8adf57b6d9b686f5ffdf83405cd8",
+      "rules_unique_to_this_source": 137437
     },
     {
       "name": "dbl.ipfire.org \u2014 hosts.txt",
@@ -603,42 +603,42 @@
     {
       "name": "gitlab.com \u2014 pro.txt",
       "url": "https://gitlab.com/hagezi/mirror/-/raw/main/dns-blocklists/adblock/pro.txt",
-      "download_bytes": 4327200,
-      "block_rules": 197741,
+      "download_bytes": 4344750,
+      "block_rules": 198641,
       "allow_rules": 0,
       "ignored_lines": 0,
-      "sha256": "82718093cf21861aabbb86ba3ae1bff4e1632e256b18bad235f3a9cbddb99668",
-      "rules_unique_to_this_source": 732
+      "sha256": "a454dbcb726830b532dc02deab7cdf26c9fed5388bf83e5abd4beb6d2e783980",
+      "rules_unique_to_this_source": 740
     },
     {
       "name": "gitlab.com \u2014 fake.txt",
       "url": "https://gitlab.com/hagezi/mirror/-/raw/main/dns-blocklists/adblock/fake.txt",
-      "download_bytes": 346981,
-      "block_rules": 17143,
+      "download_bytes": 346286,
+      "block_rules": 17109,
       "allow_rules": 0,
       "ignored_lines": 0,
-      "sha256": "982384f10a8f2534ddff06245f87689e02b6a65bfc72d1dfe60e26888eaf5657",
+      "sha256": "47812a4faf89072b212e49a07634638fb828acc060646c784bb0e3b62ee1e182",
       "rules_unique_to_this_source": 0
     },
     {
       "name": "gitlab.com \u2014 hoster.txt",
       "url": "https://gitlab.com/hagezi/mirror/-/raw/main/dns-blocklists/adblock/hoster.txt",
-      "download_bytes": 18620,
-      "block_rules": 1236,
+      "download_bytes": 18466,
+      "block_rules": 1227,
       "allow_rules": 0,
       "ignored_lines": 0,
-      "sha256": "c3879d0cf9fb64c9652d0e52c6566d5c5c880065d86633e650a43bbaca242c52",
-      "rules_unique_to_this_source": 213
+      "sha256": "44212f47536f1e8da78efdb4ed8e706e94abe26f249d75512e60a41520ced5b8",
+      "rules_unique_to_this_source": 203
     },
     {
       "name": "gitlab.com \u2014 tif.txt",
       "url": "https://gitlab.com/hagezi/mirror/-/raw/main/dns-blocklists/adblock/tif.txt",
-      "download_bytes": 43217145,
-      "block_rules": 2103097,
+      "download_bytes": 49298493,
+      "block_rules": 2425170,
       "allow_rules": 0,
       "ignored_lines": 0,
-      "sha256": "ac2f46851726d337dab07a3eeb53a3c6ed3f823219c8fe5eafffdfef23f5d717",
-      "rules_unique_to_this_source": 54726
+      "sha256": "f33f4f3ddad1a9637ef278b5f47171c3c4e3023b19489265db4b2cb73c4089a3",
+      "rules_unique_to_this_source": 99216
     },
     {
       "name": "gitlab.com \u2014 spam-tlds-adblock.txt",
@@ -647,18 +647,18 @@
       "block_rules": 10,
       "allow_rules": 0,
       "ignored_lines": 120,
-      "sha256": "7547f075b08dcc8937926854a3b40d6b73466ef861fa6341c53faaabf0db1d5b",
+      "sha256": "442d9b4366dea4df5250696b61e418d5f9cbc861d302920494a05b4f8d1cefa1",
       "rules_unique_to_this_source": 7
     },
     {
       "name": "gitlab.com \u2014 gambling.txt",
       "url": "https://gitlab.com/hagezi/mirror/-/raw/main/dns-blocklists/adblock/gambling.txt",
-      "download_bytes": 11861476,
-      "block_rules": 582306,
+      "download_bytes": 11864275,
+      "block_rules": 582506,
       "allow_rules": 0,
       "ignored_lines": 0,
-      "sha256": "1a4bc6318fc4b2c1f9d884dbabccdc9c091f1b1980c21ec0d2b88ac9560bd052",
-      "rules_unique_to_this_source": 570777
+      "sha256": "aa559969df85a81df5d26da77de48ab812fae1d40eacabb91999035d66c967db",
+      "rules_unique_to_this_source": 570969
     },
     {
       "name": "gitlab.com \u2014 native.huawei.txt",
@@ -733,22 +733,22 @@
     {
       "name": "gitlab.com \u2014 nsfw.txt",
       "url": "https://gitlab.com/hagezi/mirror/-/raw/main/dns-blocklists/adblock/nsfw.txt",
-      "download_bytes": 1587539,
-      "block_rules": 84395,
+      "download_bytes": 1589682,
+      "block_rules": 84537,
       "allow_rules": 0,
       "ignored_lines": 0,
-      "sha256": "ed895b0d9e699accaa5ee58bc1addc5db5a5f5005415bcdadfa2520b3e176ab5",
-      "rules_unique_to_this_source": 80554
+      "sha256": "16f1ca877ce3fbdcccf5fa1eb4a598ed2fc7a3c9c6163f1c58da1e17229a726b",
+      "rules_unique_to_this_source": 80685
     },
     {
       "name": "gitlab.com \u2014 doh-vpn-proxy-bypass.txt",
       "url": "https://gitlab.com/hagezi/mirror/-/raw/main/dns-blocklists/adblock/doh-vpn-proxy-bypass.txt",
-      "download_bytes": 333656,
-      "block_rules": 16012,
+      "download_bytes": 333313,
+      "block_rules": 15996,
       "allow_rules": 0,
       "ignored_lines": 0,
-      "sha256": "4a2e6f6f82dcf02400ec94d674e7b3831cc9f1011af58545501b79a453bb2b9b",
-      "rules_unique_to_this_source": 12257
+      "sha256": "c5c2f7e456e214b9748d95f760289a5fd993ebcb473ca2f1c0074ab227d886e0",
+      "rules_unique_to_this_source": 12245
     },
     {
       "name": "gitlab.com \u2014 native.lgwebos.txt",
@@ -783,11 +783,11 @@
     {
       "name": "gitlab.com \u2014 popupads.txt",
       "url": "https://gitlab.com/hagezi/mirror/-/raw/main/dns-blocklists/adblock/popupads.txt",
-      "download_bytes": 961554,
-      "block_rules": 47805,
+      "download_bytes": 959191,
+      "block_rules": 47704,
       "allow_rules": 0,
       "ignored_lines": 0,
-      "sha256": "9a500098766499e966e7b106d36b6de7a60c7128311bad2716d19aabf53268ef",
+      "sha256": "70639792640c52981029649cc99a96ba7b6a743f35769272d4dcc74f80272ede",
       "rules_unique_to_this_source": 0
     },
     {
@@ -803,12 +803,12 @@
     {
       "name": "hole.cert.pl \u2014 domains.txt",
       "url": "https://hole.cert.pl/domains/v2/domains.txt",
-      "download_bytes": 2593748,
-      "block_rules": 127459,
+      "download_bytes": 2591646,
+      "block_rules": 127306,
       "allow_rules": 0,
       "ignored_lines": 0,
-      "sha256": "c0465c15f6ba6e519a0e039e49caa58a0b0998a71ba6c2de95015cd919705c32",
-      "rules_unique_to_this_source": 21
+      "sha256": "ad04a6fb4bf983f6203ebf9dc4b21dcdf556e7615444f67f6dcda4be45757409",
+      "rules_unique_to_this_source": 15
     },
     {
       "name": "someonewhocares.org \u2014 hosts",
@@ -823,12 +823,12 @@
     {
       "name": "raw.githubusercontent.com \u2014 hosts.txt",
       "url": "https://raw.githubusercontent.com/durablenapkin/scamblocklist/master/hosts.txt",
-      "download_bytes": 60319,
-      "block_rules": 2195,
+      "download_bytes": 60164,
+      "block_rules": 2189,
       "allow_rules": 0,
       "ignored_lines": 0,
-      "sha256": "450170b96325a2c4b9c89159bf65131b088f524aada9579ca48a0d70d83f97b9",
-      "rules_unique_to_this_source": 1204
+      "sha256": "2f2872133941772d9db8b37cd74f816686c9d5f4a536a9883a8e73365fb10ad4",
+      "rules_unique_to_this_source": 1198
     },
     {
       "name": "raw.githubusercontent.com \u2014 windows10-spying-erm-i-mean-telemetry-lol.txt",
@@ -898,7 +898,7 @@
       "allow_rules": 0,
       "ignored_lines": 71,
       "sha256": "3ece2c35d8cb86f21c66baf1d6e9077403c8efdc11791dcb1bc47f399689f53f",
-      "rules_unique_to_this_source": 141036
+      "rules_unique_to_this_source": 141025
     },
     {
       "name": "raw.githubusercontent.com \u2014 adguarddns-justdomains.txt",
@@ -908,7 +908,7 @@
       "allow_rules": 0,
       "ignored_lines": 0,
       "sha256": "9426d01377a68572d3efc4f1f29ed626e8f0f5b7133861033cf47a343dd85d4c",
-      "rules_unique_to_this_source": 19841
+      "rules_unique_to_this_source": 19833
     },
     {
       "name": "raw.githubusercontent.com \u2014 hosts.txt",
@@ -923,12 +923,12 @@
     {
       "name": "phishing.army \u2014 phishing_army_blocklist_extended.txt",
       "url": "https://phishing.army/download/phishing_army_blocklist_extended.txt",
-      "download_bytes": 2991943,
-      "block_rules": 144645,
+      "download_bytes": 2983960,
+      "block_rules": 144249,
       "allow_rules": 0,
       "ignored_lines": 0,
-      "sha256": "830a118d167b9d025e3dc573954f1d57f84fa4dc6eb98cb76973ec5b074d51f8",
-      "rules_unique_to_this_source": 35
+      "sha256": "0a83aa411dfca32478855fb87447553dbf5f11e651a06867f548e4580a265a01",
+      "rules_unique_to_this_source": 71
     },
     {
       "name": "raw.githubusercontent.com \u2014 adservers.txt",
@@ -943,12 +943,12 @@
     {
       "name": "raw.githubusercontent.com \u2014 SNAFU.txt",
       "url": "https://raw.githubusercontent.com/RooneyMcNibNug/pihole-stuff/master/SNAFU.txt",
-      "download_bytes": 2071131,
-      "block_rules": 75076,
+      "download_bytes": 2072359,
+      "block_rules": 75123,
       "allow_rules": 0,
       "ignored_lines": 0,
-      "sha256": "a943732ada724e13724569cecda918d1c811bdd17d4fca97b4b96f2bc43854ad",
-      "rules_unique_to_this_source": 57849
+      "sha256": "a66e84942b426451f56d69e214b7aea7e9f25773477e692cc6b086974444f2ec",
+      "rules_unique_to_this_source": 57892
     },
     {
       "name": "winhelp2002.mvps.org \u2014 hosts.txt",
@@ -963,62 +963,62 @@
     {
       "name": "raw.githubusercontent.com \u2014 all_malicious.txt",
       "url": "https://raw.githubusercontent.com/Tempest-Solutions-Company/pihole_blocklists/refs/heads/main/all_malicious.txt",
-      "download_bytes": 28420927,
-      "block_rules": 1103565,
+      "download_bytes": 28444852,
+      "block_rules": 1104742,
       "allow_rules": 0,
       "ignored_lines": 8208,
-      "sha256": "20d571ad5c228e0c42ba42a58bf825033c36fa595a0fd3c497eb2b107481db00",
-      "rules_unique_to_this_source": 874185
+      "sha256": "a2bc3b4762ceac759f568190cab22ca8b919b43815d1c26b8b0e93540d91c4b9",
+      "rules_unique_to_this_source": 877636
     }
   ],
   "chunks": [
     {
       "filename": "blocklist-01.txt",
-      "block_rules": 799821,
-      "bytes": 17462794,
-      "sha256": "190ce88833fc552c7728f970fa2a396d7b256d2ebdeb7c6f7a928eae597a2aee"
+      "block_rules": 806065,
+      "bytes": 17581122,
+      "sha256": "b0fa63b571cd0a3d2dd43d40df20071c948d9febba60c3a3733b351ebbb89d55"
     },
     {
       "filename": "blocklist-02.txt",
-      "block_rules": 799006,
-      "bytes": 17446489,
-      "sha256": "ac3c90e1452d28561955fdef8c07eabe5f1a57de896e4faf724866328865052f"
+      "block_rules": 805214,
+      "bytes": 17564432,
+      "sha256": "ac22a756a50b0f412867abf8298e754006101f7072295ffaec9d5bce42dea329"
     },
     {
       "filename": "blocklist-03.txt",
-      "block_rules": 799845,
-      "bytes": 17461456,
-      "sha256": "aff73726855c52843574773ab438a2c261abd661b20ee3570da10b0c93637971"
+      "block_rules": 806027,
+      "bytes": 17577160,
+      "sha256": "29b85f1aea8e4dafa2b2813d93137c89559af3bd8072dcaf31432d0f7cb4d285"
     },
     {
       "filename": "blocklist-04.txt",
-      "block_rules": 798970,
-      "bytes": 17444807,
-      "sha256": "364910ffd04baea9d060b4db65ffc1a1f117536dd536fc0daf6ff316e4e7e150"
+      "block_rules": 805180,
+      "bytes": 17562947,
+      "sha256": "9a96528696ad538a7e755ed0213f7773a496dd27be3341184226d8dd51ca732c"
     },
     {
       "filename": "blocklist-05.txt",
-      "block_rules": 800060,
-      "bytes": 17463537,
-      "sha256": "50bf9e983014f593b4fc483707dbe3d704f22f1d5659e06903c70dc9a3a5ba90"
+      "block_rules": 806202,
+      "bytes": 17580513,
+      "sha256": "a718611b9d464810406311ec22f7cfe6f256bd64084d26960c8a4343a10dada1"
     },
     {
       "filename": "blocklist-06.txt",
-      "block_rules": 799933,
-      "bytes": 17464986,
-      "sha256": "0673749f09e9f6b949d38e1938ab3a0b706d7dfeb2a781b8db7dc25c3a76b3fc"
+      "block_rules": 806129,
+      "bytes": 17582575,
+      "sha256": "33bcbe8b004bce22999ebfb0dd27eefd06e0b27c09f82517883aea521f2a7fb6"
     },
     {
       "filename": "blocklist-07.txt",
-      "block_rules": 800652,
-      "bytes": 17477080,
-      "sha256": "500050b1983cb0ed52dbbcaa229f1ee5a02c454c5901a9bced4524edbe1c98ba"
+      "block_rules": 806709,
+      "bytes": 17592650,
+      "sha256": "e2517dd0263ddbad90e804d3a5096a6a4f736bc35b105ff21e3c43b15b957160"
     },
     {
       "filename": "blocklist-08.txt",
-      "block_rules": 801208,
-      "bytes": 17499605,
-      "sha256": "766ed3e19370edc033cc059e4ffe10de71f1b02fc88fda1ba374d1f3c6be8084"
+      "block_rules": 807416,
+      "bytes": 17617074,
+      "sha256": "7d632e54920954423a0b51ee2871efc58782227e782007b5eb9160225a23c59c"
     }
   ]
 }
