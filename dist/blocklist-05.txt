@@ -1,9 +1,9 @@
 [Adblock Plus]
 ! Title: Waqar's complete Pi-hole blocklist — part 05 of 08
 ! Description: Complete multi-source domain union, normalized and semantically deduplicated.
-! Last modified: 2026-10-27T07:04:40+00:00
-! Rules in this part: 823942
-! Rules in complete set: 6585522
+! Last modified: 2026-10-27T07:43:23+00:00
+! Rules in this part: 823947
+! Rules in complete set: 6585545
 ! Upstream exceptions applied during build: 3727
 ! Homepage: https://github.com/iamwaqargulzar/Pihole-Curated-Blocklist
 ! License: GPL-3.0; upstream data remains subject to its own terms
@@ -104323,6 +104323,7 @@
 ||atlascrownexss.com^
 ||atlascryptofundsst.top^
 ||atlasdaily.news^
+||atlasdaily.shop^
 ||atlasearthboutique.shop^
 ||atlasfintrix.com^
 ||atlasformrn.fr^
@@ -209078,6 +209079,7 @@
 ||closingpassport.xyz^
 ||closparty-up-inc.ml^
 ||closraymi-hotel.com^
+||closthesaurelle.net^
 ||closure-ledger.com^
 ||closureevaporatefume.com^
 ||closureglobal.xyz^
@@ -266249,6 +266251,7 @@
 ||dorbalka.ru^
 ||dorbet-gunceladresi.cam^
 ||dorbet-guncelim.cam^
+||dorbokers.shop^
 ||dorcelcash.com^
 ||dorcelle.com^
 ||dordashpromocodes.com^
@@ -300158,6 +300161,7 @@
 ||eveningedit.shop^
 ||eveninginfrance.com^
 ||eveningsafterwardlorry.com^
+||evenjobb.com^
 ||evenkeelteams.com^
 ||evenlyart.xyz^
 ||evenlyuniquefox.lol^
@@ -383627,6 +383631,7 @@
 ||homlasonline.club^
 ||homlassale.shop^
 ||homlastorepl.club^
+||homlawarm-pl.shop^
 ||homlesr.xyz^
 ||homlie.com^
 ||homllaasales.shop^

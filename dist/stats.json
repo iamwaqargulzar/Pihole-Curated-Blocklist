@@ -1,13 +1,14 @@
 {
-  "generated_at": "2026-10-27T07:04:40+00:00",
-  "source_snapshot_sha256": "aab6b88136e12f89ffd076e1aa44394b9a685e7d23a59f544f37f82a9cb169b5",
+  "generated_at": "2026-10-27T07:43:23+00:00",
+  "source_snapshot_sha256": "1f2a55bd0e3b20196179867d73bcecf3d936b8bf8468904a194007ebe26b8bf2",
   "source_count": 96,
-  "source_block_rules_total": 18128823,
-  "unique_block_domains_before_semantic_deduplication": 8371508,
-  "duplicate_block_rules_removed": 9757315,
+  "skipped_sources": [],
+  "source_block_rules_total": 18128882,
+  "unique_block_domains_before_semantic_deduplication": 8371531,
+  "duplicate_block_rules_removed": 9757351,
   "descendant_block_rules_removed": 1574635,
   "allow_conflicts_removed": 211351,
-  "final_block_rules": 6585522,
+  "final_block_rules": 6585545,
   "final_allow_rules": 3727,
   "sources": [
     {
@@ -43,11 +44,11 @@
     {
       "name": "oisd big",
       "url": "https://big.oisd.nl",
-      "download_bytes": 5320967,
-      "block_rules": 234204,
+      "download_bytes": 5321101,
+      "block_rules": 234209,
       "allow_rules": 0,
       "ignored_lines": 0,
-      "sha256": "26fddf4a464beb8e129897f3eb83a960129f6c412a945edf243f08c0f9a438eb",
+      "sha256": "5a8b28926bf881c430bed5754e5bc623ed1ead0ca33578239a52499f9039d48c",
       "rules_unique_to_this_source": 60
     },
     {
@@ -58,7 +59,7 @@
       "allow_rules": 181,
       "ignored_lines": 651,
       "sha256": "00bacb14c37b0a2b782f78399e4969cbc829f8a1db3174cf824daad2f086af85",
-      "rules_unique_to_this_source": 3905
+      "rules_unique_to_this_source": 3871
     },
     {
       "name": "StevenBlack hosts",
@@ -533,11 +534,11 @@
     {
       "name": "filters.adtidy.org \u2014 2.txt",
       "url": "https://filters.adtidy.org/mac_v2/filters/2.txt",
-      "download_bytes": 7171445,
-      "block_rules": 60978,
+      "download_bytes": 7172144,
+      "block_rules": 61013,
       "allow_rules": 3771,
-      "ignored_lines": 47168,
-      "sha256": "ef0d50b793e4bc77d88e7aed84375d4069d0730fbef70421a564429c72ddae66",
+      "ignored_lines": 47165,
+      "sha256": "6a98df407da77f2d0650461541d7e253c6192be44a014832f20ea0014a97056e",
       "rules_unique_to_this_source": 2937
     },
     {
@@ -583,11 +584,11 @@
     {
       "name": "dbl.ipfire.org \u2014 hosts.txt",
       "url": "https://dbl.ipfire.org/lists/phishing/hosts.txt",
-      "download_bytes": 12989940,
-      "block_rules": 451407,
+      "download_bytes": 12990408,
+      "block_rules": 451426,
       "allow_rules": 0,
       "ignored_lines": 0,
-      "sha256": "5031a354d33ef64479c0dc83b7716357c361daf537128d2e85ac1cfb107b22fe",
+      "sha256": "92d6b7b6c19bc5cbfa76a0749465105219b001bd9ec9fd07f78479ba3a2fb9ff",
       "rules_unique_to_this_source": 105489
     },
     {
@@ -803,11 +804,11 @@
     {
       "name": "hole.cert.pl \u2014 domains.txt",
       "url": "https://hole.cert.pl/domains/v2/domains.txt",
-      "download_bytes": 2559209,
+      "download_bytes": 2559191,
       "block_rules": 125243,
       "allow_rules": 0,
       "ignored_lines": 0,
-      "sha256": "b266b927b258b3cb0fdb7fdeeae374d9ddd6a201c13a3db236058fae8365fe50",
+      "sha256": "68f373f9160f0d286cd476527fdcf4152ef743a83e502192fb16aae3772d624e",
       "rules_unique_to_this_source": 0
     },
     {
@@ -974,51 +975,51 @@
   "chunks": [
     {
       "filename": "blocklist-01.txt",
-      "block_rules": 823271,
-      "bytes": 18059268,
-      "sha256": "e55df7b37d079232b16d79f466fa5811bc2e404ee68abf8bb8b873e2ed37f4cb"
+      "block_rules": 823272,
+      "bytes": 18059285,
+      "sha256": "908d8923358ab3b28c267caaf14aba102a02e7d097a56b5b36bd11ce9ad5f1fc"
     },
     {
       "filename": "blocklist-02.txt",
-      "block_rules": 822031,
-      "bytes": 18031024,
-      "sha256": "1cc16b8518f3be351219b374df0ba4c1ce8be09710e087c31eeb259bc6f61157"
+      "block_rules": 822033,
+      "bytes": 18031063,
+      "sha256": "1ca63fc4faf96cec8dc86cdf4120dbcb581ee42fafaa7f5de358f668636d6df1"
     },
     {
       "filename": "blocklist-03.txt",
-      "block_rules": 823367,
-      "bytes": 18055826,
-      "sha256": "bc22215d24e36aa40f8b6b69d6147a92269e345148250b716d5bc004cf7da9b3"
+      "block_rules": 823372,
+      "bytes": 18055939,
+      "sha256": "78de44fb9d78182b7b0b8a131d1d9552e44a2360b5dcb8153aff0fe609f0022d"
     },
     {
       "filename": "blocklist-04.txt",
       "block_rules": 822293,
       "bytes": 18031751,
-      "sha256": "e3bb9af6cf6be46197bd6e29b3c34f20b2a3c088c27f138cc490a05ccb51f343"
+      "sha256": "6dccacca524d4e5e37af6f004d6db60618a93a23b25b3c7aeadf9fbc145f506a"
     },
     {
       "filename": "blocklist-05.txt",
-      "block_rules": 823942,
-      "bytes": 18061314,
-      "sha256": "ea0c56489fe93fb7423383fabec0e4108e46323af2ad3d46ca84f616cc4b72e5"
+      "block_rules": 823947,
+      "bytes": 18061411,
+      "sha256": "21a26bf146987be5f6827dcde264e14f98d5b059dd6e3e134e225c51d3909f46"
     },
     {
       "filename": "blocklist-06.txt",
-      "block_rules": 823321,
-      "bytes": 18052664,
-      "sha256": "f264bd3a36adc84caffbfc6f9130cd9b1dfc649279884419ea881e72c6ce81f9"
+      "block_rules": 823322,
+      "bytes": 18052686,
+      "sha256": "e8be14efa93e649c3ca2319b2a34a59507faf8e4c8c16718a07fd19bacfa11e9"
     },
     {
       "filename": "blocklist-07.txt",
-      "block_rules": 823102,
-      "bytes": 18053233,
-      "sha256": "c3a450f249494caa198f428920bcf4197d011fc8b8cc3d21a0892746214948ac"
+      "block_rules": 823107,
+      "bytes": 18053333,
+      "sha256": "df0e9301bbc4b053afe8739b5ced2b7f253cca46380159d040989a8a2447e7ae"
     },
     {
       "filename": "blocklist-08.txt",
-      "block_rules": 824195,
-      "bytes": 18080299,
-      "sha256": "2c0ac10a43e230fa4e71db8f27ed6590e58154ed3ba69474f39d77b73a01b3f3"
+      "block_rules": 824199,
+      "bytes": 18080377,
+      "sha256": "98cdf1cc9b02a80e8a634ca1e253e42c2bfc6e3ff836054aab77235abe1a5195"
     }
   ]
 }

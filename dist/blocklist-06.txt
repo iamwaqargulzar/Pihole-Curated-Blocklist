@@ -1,9 +1,9 @@
 [Adblock Plus]
 ! Title: Waqar's complete Pi-hole blocklist — part 06 of 08
 ! Description: Complete multi-source domain union, normalized and semantically deduplicated.
-! Last modified: 2026-10-27T07:04:40+00:00
-! Rules in this part: 823321
-! Rules in complete set: 6585522
+! Last modified: 2026-10-27T07:43:23+00:00
+! Rules in this part: 823322
+! Rules in complete set: 6585545
 ! Upstream exceptions applied during build: 3727
 ! Homepage: https://github.com/iamwaqargulzar/Pihole-Curated-Blocklist
 ! License: GPL-3.0; upstream data remains subject to its own terms
@@ -318612,6 +318612,7 @@
 ||finly2-et81.cfd^
 ||finly3-consequatur81.cfd^
 ||finly4-eaque58.cfd^
+||finly5-magnam1.cfd^
 ||finly5-quod66.cfd^
 ||finly7-consequatur54.cfd^
 ||finly7-in30.cfd^

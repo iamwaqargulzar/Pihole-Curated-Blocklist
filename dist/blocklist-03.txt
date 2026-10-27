@@ -1,9 +1,9 @@
 [Adblock Plus]
 ! Title: Waqar's complete Pi-hole blocklist — part 03 of 08
 ! Description: Complete multi-source domain union, normalized and semantically deduplicated.
-! Last modified: 2026-10-27T07:04:40+00:00
-! Rules in this part: 823367
-! Rules in complete set: 6585522
+! Last modified: 2026-10-27T07:43:23+00:00
+! Rules in this part: 823372
+! Rules in complete set: 6585545
 ! Upstream exceptions applied during build: 3727
 ! Homepage: https://github.com/iamwaqargulzar/Pihole-Curated-Blocklist
 ! License: GPL-3.0; upstream data remains subject to its own terms
@@ -318751,6 +318751,7 @@
 ||finly2-ducimus72.cfd^
 ||finly2-voluptatum97.cfd^
 ||finly3-consequatur49.cfd^
+||finly3-voluptatem24.cfd^
 ||finly3-voluptatem88.cfd^
 ||finly4-dolore87.cfd^
 ||finly4-omnis60.cfd^
@@ -318760,6 +318761,7 @@
 ||finly7-autem54.cfd^
 ||finly7-iusto86.cfd^
 ||finly8-quae16.cfd^
+||finly9-quia10.cfd^
 ||finmajster.com^
 ||finmax-wealth.com^
 ||finmodel-mastery.com^
@@ -379578,6 +379580,7 @@
 ||hivanewsbet.com^
 ||hivanjck.in^
 ||hivaro.vu^
+||hivarozoveli.com^
 ||hivbank.xyz^
 ||hivcpvrbbd.my^
 ||hive77.com^
@@ -656594,6 +656597,7 @@
 ||smykbabyoutlets.com^
 ||smykdiscount.com^
 ||smykeu.com^
+||smykfashionoutlet.shop^
 ||smykoutlet.com^
 ||smykoutlet.sbs^
 ||smykoutlet.top^
@@ -700100,6 +700104,7 @@
 ||teleranxxo.cyou^
 ||telerealty.xyz^
 ||telereave.rest^
+||telerebrig.beer^
 ||teleresort.xyz^
 ||telerevnsg.icu^
 ||telergaemoam.cc^

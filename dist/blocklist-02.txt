@@ -1,9 +1,9 @@
 [Adblock Plus]
 ! Title: Waqar's complete Pi-hole blocklist — part 02 of 08
 ! Description: Complete multi-source domain union, normalized and semantically deduplicated.
-! Last modified: 2026-10-27T07:04:40+00:00
-! Rules in this part: 822031
-! Rules in complete set: 6585522
+! Last modified: 2026-10-27T07:43:23+00:00
+! Rules in this part: 822033
+! Rules in complete set: 6585545
 ! Upstream exceptions applied during build: 3727
 ! Homepage: https://github.com/iamwaqargulzar/Pihole-Curated-Blocklist
 ! License: GPL-3.0; upstream data remains subject to its own terms
@@ -318768,6 +318768,7 @@
 ||finly0-ducimus96.cfd^
 ||finly0-nam51.cfd^
 ||finly3-neque33.cfd^
+||finly7-non75.cfd^
 ||finly9-in58.cfd^
 ||finlykkeedu.com^
 ||finlyrex.net^
@@ -699149,6 +699150,7 @@
 ||teleouo.xyz^
 ||teleoutxxo.shop^
 ||teleowfaxs.help^
+||teleoxlxqu.luxe^
 ||telepaiement-mesamendes.fr^
 ||telepaiment-service.fr^
 ||telepaimentenligne.fr^
