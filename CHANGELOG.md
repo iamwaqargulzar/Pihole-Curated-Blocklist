@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-27
+
+- Replaced the retired URLhaus hostfile (HTTP 410 since 22 Oct) with the malware-filter `urlhaus-filter` hosts feed, which is built from the URLhaus API.
+
 ## 2026-09-22
 
 - Activated 90 additional domain-compatible upstream feeds after removing three duplicate URLs.
