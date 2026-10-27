@@ -3,6 +3,7 @@
 ## 2026-10-27
 
 - Replaced the retired URLhaus hostfile (HTTP 410 since 22 Oct) with the malware-filter `urlhaus-filter` hosts feed, which is built from the URLhaus API.
+- Skipped up to five dead or empty additional sources with a warning instead of failing the build; core sources still fail it.
 
 ## 2026-09-22
 

@@ -54,12 +54,13 @@ Every emitted rule uses Pi-hole-compatible ABP syntax: `||example.com^`. Upstrea
 
 A scheduled build is rejected when:
 
-- a source is unreachable or unexpectedly small;
+- a core source in `sources.json` is unreachable or unexpectedly small;
+- more than five additional sources are unreachable or unexpectedly small;
 - the final list falls outside the configured 200,000–10,000,000 rule range;
 - an essential domain such as `github.com`, `google.com`, or `microsoft.com` would be blocked without an exception;
 - unit tests fail.
 
-The last good files remain available when a build fails. Each successful build includes [source counts and hashes](dist/stats.json) plus [SHA-256 checksums](dist/checksums.sha256).
+Up to five failing additional sources are skipped with a warning on the workflow run and listed under `skipped_sources` in [stats.json](dist/stats.json). The last good files remain available when a build fails. Each successful build includes [source counts and hashes](dist/stats.json) plus [SHA-256 checksums](dist/checksums.sha256).
 
 ## Limitations
 

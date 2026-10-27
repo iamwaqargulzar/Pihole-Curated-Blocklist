@@ -45,6 +45,8 @@ CRITICAL_DOMAINS = {
 MINIMUM_COMBINED_RULES = 200_000
 MAXIMUM_COMBINED_RULES = 10_000_000
 CHUNK_COUNT = 8
+# Additional feeds come and go upstream; a few may be skipped, core sources never.
+MAXIMUM_SKIPPED_SOURCES = 5
 
 
 @dataclass
@@ -194,6 +196,7 @@ def load_sources(root: Path, include_additional: bool = True) -> list[dict[str, 
                 "homepage": f"{parsed.scheme}://{parsed.netloc}/",
                 "license": "See upstream",
                 "minimum_rules": 1,
+                "optional": True,
             }
             if include_additional:
                 sources.append(extra)
@@ -227,16 +230,32 @@ def main() -> int:
     block_frequency: Counter[str] = Counter()
     source_block_sets: list[set[str]] = []
     source_stats: list[dict[str, object]] = []
+    skipped_sources: list[dict[str, object]] = []
 
     for source in sources:
-        payload = fetch(source["url"])
-        parsed = parse_content(payload.decode("utf-8", errors="replace"))
-        accepted = len(parsed.blocks) + len(parsed.allows)
-        minimum = int(source["minimum_rules"])
-        if accepted < minimum:
-            raise RuntimeError(
-                f"{source['name']} yielded {accepted:,} rules; expected at least {minimum:,}"
+        try:
+            payload = fetch(source["url"])
+            parsed = parse_content(payload.decode("utf-8", errors="replace"))
+            accepted = len(parsed.blocks) + len(parsed.allows)
+            minimum = int(source["minimum_rules"])
+            if accepted < minimum:
+                raise RuntimeError(
+                    f"{source['name']} yielded {accepted:,} rules; expected at least {minimum:,}"
+                )
+        except RuntimeError as error:
+            if not source.get("optional"):
+                raise
+            # GitHub Actions shows this line as a warning annotation on the run.
+            print(f"::warning::skipped additional source: {error}", file=sys.stderr)
+            skipped_sources.append(
+                {"name": source["name"], "url": source["url"], "error": str(error)}
             )
+            if len(skipped_sources) > MAXIMUM_SKIPPED_SOURCES:
+                raise RuntimeError(
+                    f"{len(skipped_sources)} additional sources failed; "
+                    f"at most {MAXIMUM_SKIPPED_SOURCES} may be skipped"
+                ) from error
+            continue
         all_blocks.update(parsed.blocks)
         all_allows.update(parsed.allows)
         block_frequency.update(parsed.blocks)
@@ -297,7 +316,8 @@ def main() -> int:
     stats: dict[str, object] = {
         "generated_at": generated,
         "source_snapshot_sha256": source_snapshot,
-        "source_count": len(sources),
+        "source_count": len(source_stats),
+        "skipped_sources": skipped_sources,
         "source_block_rules_total": raw_block_count,
         "unique_block_domains_before_semantic_deduplication": unique_before_collapse,
         "duplicate_block_rules_removed": raw_block_count - unique_before_collapse,

@@ -1,3 +1,4 @@
+import json
 import tempfile
 import unittest
 from pathlib import Path
@@ -88,6 +89,46 @@ class BuildTests(unittest.TestCase):
             self.assertNotIn("||example.com^", output)
             self.assertNotIn("||safe.example.com^", output)
             self.assertNotIn("@@", output)
+
+    def run_with_dead_sources(self, extra_urls, dead_urls):
+        def fake_fetch(url):
+            if url in dead_urls:
+                raise RuntimeError(f"failed to download {url}: HTTP Error 410: Gone")
+            return b"||ads.example.com^\n"
+
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            (root / "sources.json").write_text(
+                '[{"name":"core","url":"https://core.test/list",'
+                '"homepage":"https://core.test","license":"test",'
+                '"minimum_rules":1}]'
+            )
+            (root / "additional-sources.txt").write_text("\n".join(extra_urls) + "\n")
+            (root / "allowlist.txt").write_text("")
+            with (
+                patch.object(build, "ROOT", root),
+                patch.object(build, "MINIMUM_COMBINED_RULES", 1),
+                patch.object(build, "fetch", side_effect=fake_fetch),
+                patch.object(build, "CRITICAL_DOMAINS", set()),
+                patch("sys.argv", ["build.py"]),
+            ):
+                build.main()
+            return json.loads((root / "dist" / "stats.json").read_text())
+
+    def test_dead_additional_source_is_skipped(self):
+        dead = "https://dead.test/hosts"
+        stats = self.run_with_dead_sources(["https://alive.test/hosts", dead], {dead})
+        self.assertEqual(stats["source_count"], 2)
+        self.assertEqual([item["url"] for item in stats["skipped_sources"]], [dead])
+
+    def test_dead_core_source_fails_build(self):
+        with self.assertRaisesRegex(RuntimeError, "core.test"):
+            self.run_with_dead_sources([], {"https://core.test/list"})
+
+    def test_too_many_dead_additional_sources_fail_build(self):
+        dead = {f"https://dead{i}.test/hosts" for i in range(build.MAXIMUM_SKIPPED_SOURCES + 1)}
+        with self.assertRaisesRegex(RuntimeError, "additional sources failed"):
+            self.run_with_dead_sources(sorted(dead), dead)
 
 
 if __name__ == "__main__":
