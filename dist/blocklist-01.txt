@@ -1,9 +1,9 @@
 [Adblock Plus]
 ! Title: Waqar's complete Pi-hole blocklist — part 01 of 08
 ! Description: Complete multi-source domain union, normalized and semantically deduplicated.
-! Last modified: 2026-10-27T07:43:23+00:00
-! Rules in this part: 823272
-! Rules in complete set: 6585545
+! Last modified: 2026-10-27T08:58:48+00:00
+! Rules in this part: 823286
+! Rules in complete set: 6585618
 ! Upstream exceptions applied during build: 3727
 ! Homepage: https://github.com/iamwaqargulzar/Pihole-Curated-Blocklist
 ! License: GPL-3.0; upstream data remains subject to its own terms
@@ -5004,7 +5004,6 @@
 ||12302rhlbq.makeup^
 ||12302vtv.com^
 ||12306vtv.com^
-||12310929h452.buzz^
 ||12311789.bancadigitar.repl.co^
 ||123122.vip^
 ||123123123.asia^
@@ -8453,7 +8452,6 @@
 ||19f8df649f0a7305d48957f821298c3c.com^
 ||19f8f39d20c71175.com^
 ||19fzl.cn^
-||19g88g99v0.pics^
 ||19gmail.com^
 ||19i9.com^
 ||19ivybet5733.io^
@@ -24167,7 +24165,6 @@
 ||36ppu2265.info^
 ||36robots.com^
 ||36rup56.xyz^
-||36swppu.net^
 ||36taobao.com^
 ||36tbets.com^
 ||36u.by1qw208.cc^
@@ -55027,7 +55024,6 @@
 ||absabankiing.co.za^
 ||absaonline-banking-updatecpsess5249786720-5768867.sophie.4hosting.xyz^
 ||absautocapital.com^
-||absbanks.org^
 ||abscbnfoundation.org^
 ||abscessed.space^
 ||abschieben.com^
@@ -93449,6 +93445,8 @@
 ||app.chrome-extension.digital^
 ||app.circle.dental^
 ||app.citibikenyc.com^
+||app.clientedigital.click^
+||app.clienteonline.shop^
 ||app.clientify.com^
 ||app.clioudir.com^
 ||app.clioudit.com^
@@ -152264,6 +152262,7 @@
 ||bookingupgradingalways.stream^
 ||bookingupgradingsys.review^
 ||bookingupgradingsystem.date^
+||bookingusdt2cash.com^
 ||bookingverification.com^
 ||bookingveriflcation968106.com^
 ||bookingvision.xyz^
@@ -155347,8 +155346,10 @@
 ||bradesco.red^
 ||bradesco.resgatepontos.com.ua^
 ||bradesco.segurancaempresaweb.digital^
+||bradesco.sistematopaz.click^
 ||bradesco.support^
 ||bradesco.topazpj.lat^
+||bradesco.topazseguro.live^
 ||bradesco.validacaocadastral.digital^
 ||bradesco2.coteaquisaude.com^
 ||bradescoadidas.com.ph^
@@ -187462,6 +187463,7 @@
 ||ccccarreffoulskss.store^
 ||ccccc33333.click^
 ||ccccc67kkkkk.com^
+||cccchic.shop^
 ||cccdddss.top^
 ||ccce.cash^
 ||cccedgy.shop^
@@ -191310,6 +191312,7 @@
 ||cerodamed.com^
 ||ceronormal.cl^
 ||ceroplawiepewrosdor.com^
+||ceroruis.click^
 ||cerosmonarchens.cyou^
 ||cerotop.com^
 ||cerqueira.fr^
@@ -202352,6 +202355,7 @@
 ||choctawnation.click^
 ||choczerodirect.shop^
 ||chodansinh.net^
+||chodatoga.blog^
 ||chodziez.info^
 ||chof.info^
 ||chogovietnam.com^
@@ -202719,6 +202723,7 @@
 ||chrif8kdstie.com^
 ||chriomskmk.webflow.io^
 ||chris-burgess.co.uk^
+||chris-esthetic.fr^
 ||chrisabeldevera.com^
 ||chrisalim.com.mx^
 ||chrisandelizabethcarroll.com^
@@ -205896,7 +205901,6 @@
 ||claim-welcome-bonus.top^
 ||claim-windheaven.xyz^
 ||claim-world.xyz^
-||claim-xaman.app^
 ||claim-xrpl.com^
 ||claim-xrps.com^
 ||claim-yala.icu^
@@ -262525,7 +262529,6 @@
 ||dleaka.cyou^
 ||dleapl.watch^
 ||dlebox.site^
-||dledoux.me^
 ||dleenginestore.com^
 ||dles.click^
 ||dles.in^
@@ -263200,6 +263203,7 @@
 ||dnpz123.com^
 ||dnqet.vip^
 ||dnqmkmtsumgfm42ea3w2b2bqimwi3vfekgv32eccc7sjcfsdrxpq.arweave.net^
+||dnrdoig.net^
 ||dnrheavyweldservices.com^
 ||dnrole.info^
 ||dnrstudios.co.ke^
@@ -264556,7 +264560,6 @@
 ||dofastproxyssl-proxy.tk^
 ||dofeixing.com^
 ||doferteres.com^
-||dofewestgroove.icu^
 ||doffbitcoin.xyz^
 ||dofhpvukqexomis.review^
 ||dofinansowanie2026.life^
@@ -307473,11 +307476,13 @@
 ||facebook8e4ge.vmlx98.codes^
 ||facebook93916.mengunjungi-website28.cfd^
 ||facebookaccelerator.com^
+||facebookaccount-zoomtrend.ph^
 ||facebookaccount-zoomxdream.ph^
 ||facebookaccount-zoomxworldwide.ph^
 ||facebookaccount-zoomxworthy.ph^
 ||facebookaccount-zoomxwowzzflare.ph^
 ||facebookaccount-zoomxwowzzflash.ph^
+||facebookaccount-zoomzephyryx11.ph^
 ||facebookaccount-zoomzoomz27.ph^
 ||facebookaccounthack.net^
 ||facebookaccountloginsecured.com.ph^
@@ -342526,7 +342531,6 @@
 ||gdepoker.club^
 ||gdepotenciya.ru^
 ||gdeqt.com^
-||gder89.site^
 ||gdero.hit.gemius.pl^
 ||gderproster.net^
 ||gderrrpololo.net^
@@ -370178,6 +370182,7 @@
 ||hao123.cn^
 ||hao123img.com^
 ||hao699.xyz^
+||hao777.net^
 ||hao788d.com^
 ||hao788irxjp.site^
 ||hao788mantab.online^
@@ -378500,6 +378505,7 @@
 ||hibiscus.com.my^
 ||hibiscuswellness.xyz^
 ||hibitcrypto.com^
+||hibofaka.blog^
 ||hiboodev.fr^
 ||hiboost.com^
 ||hiboria.es^
@@ -406916,7 +406922,6 @@
 ||iolosupportnumber.com^
 ||iomaparis.cn^
 ||iomfdm.pics^
-||iomhht.top^
 ||iomindvsf.com^
 ||iomlsfqgvugaf.space^
 ||iompyqh.click^
@@ -433367,6 +433372,7 @@
 ||kochatapp.com^
 ||kochherzrezepte.com^
 ||kochiauncaked.cfd^
+||kocholding-ai.net^
 ||kochrecovery.com^
 ||kochrezepte-net.de^
 ||kochumfrage.de^
@@ -444401,7 +444407,6 @@
 ||ledger-live-io.wixstudio.com^
 ||ledger-live-learn.webflow.io^
 ||ledger-live-setup.gitbook.io^
-||ledger-live-stakearchdemon09.ph^
 ||ledger-live-start.com^
 ||ledger-live-valle.gitbook.io^
 ||ledger-live-wal.gitbook.io^
@@ -445552,6 +445557,7 @@
 ||legions.xyz^
 ||legionsupport.net^
 ||legiosport.com^
+||legisapex.com^
 ||legislative-liechtenstein-relationships-rw.trycloudflare.com^
 ||legislatives.info^
 ||legisld.qpon^
@@ -451661,6 +451667,7 @@
 ||littlerobotdanton.com^
 ||littlerock321.com^
 ||littlerosespace.com^
+||littlescottyboy.com^
 ||littlesecures.xyz^
 ||littleservice.xyz^
 ||littleshutterhomes.com^
@@ -459214,6 +459221,7 @@
 ||lotto-bremen.de^
 ||lotto-bw.de^
 ||lotto-casino-official.com^
+||lotto-hessen-de.de^
 ||lotto-indiapools.com^
 ||lotto-login.com^
 ||lotto-nz-casino.space^
@@ -495576,6 +495584,8 @@
 ||mmda-ltoncaps.click^
 ||mmda-ltoncaps.in^
 ||mmda-ncaplto.garden^
+||mmda-ncrncap.sbs^
+||mmda.help^
 ||mmdancap-ncr.com^
 ||mmdancap-ncr.xin^
 ||mmdancap.rest^
@@ -495951,7 +495961,6 @@
 ||mncwpe.link^
 ||mnd.info^
 ||mndd.com^
-||mndecoration.fr^
 ||mndg-defender.pro^
 ||mndgt.shop^
 ||mndlvr.com^
@@ -523448,6 +523457,7 @@
 ||nobletrustedge.pro^
 ||nobletrustica.digital^
 ||noblevelmark.com^
+||noblevermostead.net^
 ||noblevertatrade.com^
 ||noblirstudio.online^
 ||noblkava.com^
@@ -530107,6 +530117,7 @@
 ||o3.ivinteractive.com^
 ||o31qv3.top^
 ||o3286.com^
+||o35jufwu6.com^
 ||o365-cloud-file.s3.che01.cloud-object-storage.appdomain.cloud^
 ||o365.office365maails.ml^
 ||o365cloudfilesdocs.com^
@@ -536185,7 +536196,6 @@
 ||onaironsite.com^
 ||oname.forgerssa.com^
 ||onameketathar.com^
-||onanata.blog^
 ||onanewcarkey.live^
 ||onanicytoz.store^
 ||onanozi.top^
@@ -591334,7 +591344,6 @@
 ||pyxpilro.pro^
 ||pyxqbzdwemuteness.review^
 ||pyxtsg.cn^
-||pyy.ink^
 ||pyyfc888aaaaa.com^
 ||pyym9.com^
 ||pyzkk.com^
@@ -593853,7 +593862,6 @@
 ||qpykdj.sbs^
 ||qpzsvt.digital^
 ||qq-0732gwh22.com^
-||qq-797b.net^
 ||qq-alipay-v101.top^
 ||qq-nbazbw.com^
 ||qq-oversightmss.tk^
@@ -609972,6 +609980,7 @@
 ||returnass.com^
 ||returnavity.net^
 ||returnbgermannow-rowstkg.tk^
+||returnbydate.com^
 ||returnchatbot.xyz^
 ||returncontent.xyz^
 ||returndev.com^
@@ -621104,6 +621113,7 @@
 ||ruporno11.site^
 ||ruporno5.site^
 ||rupotencia.ru^
+||rupricale.blog^
 ||ruptured-accountability.site^
 ||ruptureservices.xyz^
 ||ruqawanexorpartners.forum^
@@ -621371,7 +621381,6 @@
 ||rutad.ru^
 ||rutadelchocolate.cl^
 ||rutagranconvencion.com^
-||rutapass.mom^
 ||rutasbilbao.com^
 ||rutcracker.org^
 ||rutech.tech^
@@ -621811,6 +621820,7 @@
 ||rxwjetugafkwt.online^
 ||rxworldservice.com^
 ||rxwq-protect.pro^
+||rxx1se9.net^
 ||rxx80p2yjqum3.liusanjie.cc^
 ||rxxdjj.club^
 ||rxxlgjjx.com^
@@ -630431,7 +630441,6 @@
 ||screeassis.cyou^
 ||screechcompany.com^
 ||screechinghoatzin.pro^
-||screechings.top^
 ||screefirme.rest^
 ||screen-error-alrt.info^
 ||screen-help-alrt.info^
@@ -683178,6 +683187,7 @@
 ||suportemaster.app^
 ||suportenaweb.com^
 ||suportenet-empresas.click^
+||suportenetgerentejuridico.digital^
 ||suporteoffice.com^
 ||suporteparaempresapj.ink^
 ||suporteparaempresas.com^
@@ -705471,6 +705481,7 @@
 ||thehandtoolauto.com^
 ||thehandyforce.com^
 ||thehandygal.com^
+||thehandyplumbertoronto.ca^
 ||thehankwilliamsmuseum.com^
 ||thehappycoders.com^
 ||thehappygardens.shop^
@@ -715802,6 +715813,7 @@
 ||topmusicfm.com.br^
 ||topmypet.xyz^
 ||topnatch-ai.com^
+||topnayz.net^
 ||topnestventure.live^
 ||topnewbalance.com^
 ||topnewcasinossuk.com^
@@ -732531,6 +732543,7 @@
 ||uahzw.doghead.sbs^
 ||uaiajsjs.vrl2023.com^
 ||uaicouros.com.br^
+||uaiibx7.net^
 ||uainegroup.com^
 ||uaiugdbudbdfz.store^
 ||uaizhan.xyz^
@@ -735811,6 +735824,7 @@
 ||umweltportalgov.com^
 ||umwg-adguard.pro^
 ||umwnorthtexas.org^
+||umwzmxoufszxv.site^
 ||umx38.top^
 ||umxcox.glazos.com^
 ||umxwcxcpxkkv.xyz^
@@ -739204,7 +739218,6 @@
 ||update-versi-terbarudana.bsgtouch.com^
 ||update-webloginappstoreid.com^
 ||update-wending-pg.com.cn^
-||update-xaman.app^
 ||update-xdana-indonesiaa.webnet.my.id^
 ||update-your-account-information.nhadepbanme.vn^
 ||update-your-account-information.pedelectric.com.au^
@@ -741519,6 +741532,7 @@
 ||usaa1992ab.web.app^
 ||usaaa.democraticgroup.info^
 ||usaacquiretry.info^
+||usaadigitalbank.servicesdf0c07ab-971d-4ec4-8ad9.aloshghoroni.com^
 ||usaadumpdata.page.link^
 ||usaafederalsavingsb.com^
 ||usaafedralsavingsbank.com^
@@ -754304,7 +754318,6 @@
 ||viabenessere.com^
 ||viabet138.online^
 ||viabilidade.peixotonetwork.com.br^
-||viability.pl^
 ||viable.cl^
 ||viablecampaign.best^
 ||viablecatalog.xyz^
@@ -780249,6 +780262,7 @@
 ||wiresbtc.xyz^
 ||wireshark-app.online^
 ||wireshoe.xyz^
+||wireskatecatch.shop^
 ||wireskull.xyz^
 ||wireslow.xyz^
 ||wiretailworks.digital^
@@ -809414,7 +809428,6 @@
 ||yh77f.com^
 ||yh7s5d.com^
 ||yh7vpx02.live^
-||yh7wx.top^
 ||yh844.com^
 ||yh87889.com^
 ||yh888.xyz^
@@ -813171,6 +813184,7 @@
 ||yr.copsesoptime.shop^
 ||yr.setousprivets.com^
 ||yr1999.com^
+||yr314mkl2td38.dilocs.shop^
 ||yr3xjvtf.top^
 ||yra9rm.com^
 ||yraexzjnxasnz.site^
